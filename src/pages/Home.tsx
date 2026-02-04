@@ -70,18 +70,22 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <h1 className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-wider mb-6 glow-text">
-              RABINDRANATH
-              <br />
-              <span className="text-primary">PREMIER LEAGUE</span>
+            <p className="text-lg md:text-xl text-muted-foreground mb-4 font-medium tracking-widest uppercase typewriter">
+              Richardson Hall Presents
+            </p>
+            <h1 className="font-display text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-bold tracking-wider mb-4 glow-text">
+              <span className="text-primary">RPL 5.0</span>
             </h1>
+            <p className="text-xl md:text-2xl text-foreground/90 mb-10 font-light tracking-wide">
+              Rabindranath Tagore Premier League
+            </p>
           </motion.div>
 
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="text-xl md:text-2xl text-muted-foreground mb-10 font-light tracking-wide"
+            className="text-lg md:text-xl text-muted-foreground mb-10 font-light tracking-wide italic"
           >
             Sting the Competition
           </motion.p>
