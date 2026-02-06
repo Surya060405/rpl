@@ -29,7 +29,7 @@ const App = () => {
         <BrowserRouter>
           <AnimatePresence mode="wait">
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/" element={<Home isLoading={isLoading} />} />
               <Route path="/events" element={<Events />} />
               <Route path="/schedule" element={<Schedule />} />
               <Route path="/contact" element={<Contact />} />
