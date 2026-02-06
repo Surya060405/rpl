@@ -60,7 +60,7 @@ const itemVariants = {
   },
 };
 
-const Home = () => {
+const Home = ({ isLoading = false }: { isLoading?: boolean }) => {
   return (
     <Layout>
       {/* Hero Section */}
@@ -74,7 +74,7 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <p className="text-lg md:text-xl text-muted-foreground mb-4 font-medium tracking-widest uppercase typewriter">
+            <p className={`text-lg md:text-xl text-muted-foreground mb-4 font-medium tracking-widest uppercase ${!isLoading ? 'typewriter' : 'opacity-0'}`}>
               Richardson Hall Presents
             </p>
             <h1 className="font-display text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-bold tracking-wider mb-4 glow-text">
