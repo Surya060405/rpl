@@ -1,20 +1,17 @@
-import { Instagram, Twitter, Youtube, Mail } from "lucide-react";
+import { Instagram } from "lucide-react";
 import ScorpionLogo from "./ScorpionLogo";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Youtube, href: "#", label: "YouTube" },
-    { icon: Mail, href: "mailto:contact@rpl.edu", label: "Email" },
+    { icon: Instagram, href: "https://www.instagram.com/richardson_premiere_league/", label: "Instagram" },
   ];
 
   return (
-    <footer className="relative border-t border-glass-border/20 bg-deep-black/80 backdrop-blur-sm">
+    <footer className="relative z-50 border-t border-glass-border/20 bg-deep-black/80 backdrop-blur-sm">
       {/* Subtle scorpion watermark */}
-      <div className="absolute right-4 top-1/2 -translate-y-1/2 opacity-[0.03]">
+      <div className="absolute right-4 top-1/2 -translate-y-1/2 opacity-[0.03] pointer-events-none">
         <ScorpionLogo size={120} />
       </div>
 
@@ -34,8 +31,10 @@ const Footer = () => {
               <a
                 key={social.label}
                 href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label={social.label}
-                className="p-2 rounded-full text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300"
+                className="p-2 rounded-full text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300 cursor-pointer"
               >
                 <social.icon size={20} />
               </a>

@@ -226,7 +226,7 @@ function FogClouds() {
         data.position[0] + Math.sin(time * data.speed + data.offset) * 1.5;
       cloud.position.y =
         data.position[1] + Math.cos(time * data.speed * 0.7 + data.offset) * 0.8;
-      
+
       const material = (cloud as THREE.Mesh).material as THREE.MeshStandardMaterial;
       if (material) {
         material.opacity =
@@ -255,6 +255,9 @@ function FogClouds() {
 const HeroFogScene = () => {
   return (
     <div className="absolute inset-0 bg-[hsl(228,84%,2%)]">
+      {/* Top fade for smooth navbar transition */}
+      <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-black/80 to-transparent z-10 pointer-events-none" />
+
       <Canvas
         camera={{ position: [0, 0, 6], fov: 75 }}
         dpr={[1, 2]}
