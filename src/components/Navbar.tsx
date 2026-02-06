@@ -30,7 +30,7 @@ const Navbar = () => {
               whileHover={{ rotate: 10, scale: 1.1 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <ScorpionLogo size={36} className="md:w-10 md:h-10" />
+              <ScorpionLogo size={64} className="h-16" />
             </motion.div>
             <span className="font-display text-xl md:text-2xl font-bold tracking-wider text-foreground">
               RPL
