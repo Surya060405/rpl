@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, IdCard, Clock, Scale, GraduationCap } from "lucide-react";
 import ScorpionLogo from "@/components/ScorpionLogo";
 import Layout from "@/components/Layout";
+import HeroFogScene from "@/components/HeroFogScene";
 
 const rules = [
   {
@@ -54,15 +55,8 @@ const Home = () => {
     <Layout>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Large scorpion silhouette */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 0.08, scale: 1 }}
-          transition={{ duration: 2, ease: [0.4, 0, 0.2, 1] as const }}
-          className="absolute inset-0 flex items-center justify-center pointer-events-none"
-        >
-          <ScorpionLogo size={600} className="animate-float" />
-        </motion.div>
+        {/* Three.js Fog Background */}
+        <HeroFogScene />
 
         <div className="container mx-auto px-4 text-center relative z-10">
           <motion.div
