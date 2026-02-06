@@ -269,7 +269,7 @@
     }
 
     to {
-      width: 100%;
+      width: 25ch;
     }
   }
 
@@ -309,9 +309,10 @@
     display: inline-block;
     overflow: hidden;
     white-space: nowrap;
+    max-width: max-content;
     border-right: 2px solid hsl(var(--primary));
     animation:
-      typewriter 2.5s steps(24, end) 0.5s 1 normal both,
+      typewriter 2.5s steps(25, end) 0.5s 1 normal both,
       blink-caret 0.75s step-end 4 0.5s forwards;
   }
 }
