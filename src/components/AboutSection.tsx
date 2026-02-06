@@ -6,6 +6,16 @@ const AboutSection = () => {
   return (
     <section className="py-20 md:py-32">
       <div className="container mx-auto px-4">
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="font-display text-3xl md:text-5xl font-bold text-center mb-16"
+        >
+          About <span className="text-primary">Us</span>
+        </motion.h2>
+
         {/* Row 1: The Legacy (left) + Scorpion Logo (right) */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
