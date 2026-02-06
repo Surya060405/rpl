@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, IdCard, Clock, Scale, GraduationCap } from "lucide-react";
+import { ArrowRight, IdCard, Trophy, Building2, Users, Scale, GraduationCap } from "lucide-react";
 import Layout from "@/components/Layout";
 import HeroFogScene from "@/components/HeroFogScene";
 import AboutSection from "@/components/AboutSection";
@@ -8,23 +8,33 @@ import AboutSection from "@/components/AboutSection";
 const rules = [
   {
     icon: IdCard,
-    title: "ID Required",
-    description: "All participants must carry valid institutional ID cards for verification.",
+    title: "College ID Mandatory",
+    description: "College ID card is mandatory for each participant in the tournament.",
   },
   {
-    icon: Clock,
-    title: "Report Early",
-    description: "Teams must report 30 minutes before their scheduled match time.",
+    icon: Trophy,
+    title: "Cricket - Department Wise",
+    description: "Cricket will be played Department Wise. All the departments must register their teams before the Tournament.",
   },
   {
-    icon: Scale,
-    title: "Fair Play",
-    description: "Unsportsmanlike conduct will result in immediate disqualification.",
+    icon: Building2,
+    title: "Other Sports - Hall/Hostel Wise",
+    description: "All the other sports will be played Hall/Hostel wise. One person can play from any single Hall/Hostel only.",
+  },
+  {
+    icon: Users,
+    title: "Day Scholars",
+    description: "Day Scholars can register in tournament by contacting with respective JMCR/Sports Secretary of any Hall/Hostel.",
   },
   {
     icon: GraduationCap,
-    title: "Alumni Policy",
-    description: "Alumni participants must register separately with proof of graduation.",
+    title: "Alumni Participation",
+    description: "Alumni from respective Departments and Halls/Hostels can participate in the tournament.",
+  },
+  {
+    icon: Scale,
+    title: "Rule Violations",
+    description: "Violation of General Rules will lead to direct disqualification from the tournament.",
   },
 ];
 
@@ -137,7 +147,7 @@ const Home = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
-            className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"
+            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
           >
             {rules.map((rule, index) => (
               <motion.div
