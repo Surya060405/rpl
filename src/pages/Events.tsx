@@ -38,14 +38,14 @@ const sports: Sport[] = [
     icon: Swords,
     category: "indoor",
     description: "Where minds wage war. Inter Hall/Hostel Chess Tournament — a silent battlefield of tactics, foresight, and calculated brilliance.",
-    players: "1 per team",
+    players: "3 per team",
   },
   {
     name: "Badminton",
     icon: CircleDot,
     category: "indoor",
     description: "Lightning reflexes meet pinpoint precision. Inter Hall/Hostel Badminton Tournament featuring fierce rallies and razor-sharp smashes.",
-    players: "1-2 per team",
+    players: "5 per team",
   },
 ];
 
