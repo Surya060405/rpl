@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, IdCard, Clock, Scale, GraduationCap } from "lucide-react";
-import ScorpionLogo from "@/components/ScorpionLogo";
 import Layout from "@/components/Layout";
 import HeroFogScene from "@/components/HeroFogScene";
+import AboutSection from "@/components/AboutSection";
 
 const rules = [
   {
@@ -117,54 +117,7 @@ const Home = () => {
       </section>
 
       {/* About Section */}
-      <section className="py-20 md:py-32">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8 }}
-            className="grid md:grid-cols-2 gap-12 items-center"
-          >
-            <div className="relative">
-              <div className="glass-card p-8 md:p-12 relative overflow-hidden">
-                {/* Watermark */}
-                <div className="absolute -right-10 -bottom-10 opacity-5">
-                  <ScorpionLogo size={200} />
-                </div>
-
-                <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">
-                  The <span className="text-primary">Legacy</span>
-                </h2>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  Rabindranath Premier League stands as a testament to athletic excellence 
-                  and competitive spirit. For over a decade, we have been the premier 
-                  inter-departmental sports tournament, bringing together the finest 
-                  athletes from every corner of our institution.
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  From the thundering cricket pitches to the strategic chess boards, 
-                  from intense football matches to the digital battlegrounds of esports — 
-                  RPL is where champions are forged and legends are born.
-                </p>
-              </div>
-            </div>
-
-            <div className="relative flex justify-center">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="relative"
-              >
-                <div className="absolute inset-0 bg-primary/20 blur-[80px] rounded-full" />
-                <ScorpionLogo size={300} className="relative z-10 animate-float" />
-              </motion.div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      <AboutSection />
 
       {/* General Rules Section */}
       <section className="py-20 md:py-32">
