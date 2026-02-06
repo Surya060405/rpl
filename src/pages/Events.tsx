@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { 
   Trophy, 
-  Target, 
-  Swords,
-  CircleDot,
+  Volleyball, 
+  Crown,
+  Feather,
 } from "lucide-react";
 import Layout from "@/components/Layout";
 import { Badge } from "@/components/ui/badge";
@@ -28,21 +28,21 @@ const sports: Sport[] = [
   },
   {
     name: "Volleyball",
-    icon: Target,
+    icon: Volleyball,
     category: "outdoor",
     description: "Spikes, blocks, and relentless rallies. Inter Hall/Hostel Volleyball Tournament — a showcase of power, coordination, and aerial dominance on the court.",
     players: "6 per team",
   },
   {
     name: "Chess",
-    icon: Swords,
+    icon: Crown,
     category: "indoor",
     description: "Where minds wage war. Inter Hall/Hostel Chess Tournament — a silent battlefield of tactics, foresight, and calculated brilliance.",
     players: "3 per team",
   },
   {
     name: "Badminton",
-    icon: CircleDot,
+    icon: Feather,
     category: "indoor",
     description: "Lightning reflexes meet pinpoint precision. Inter Hall/Hostel Badminton Tournament featuring fierce rallies and razor-sharp smashes.",
     players: "5 per team",
