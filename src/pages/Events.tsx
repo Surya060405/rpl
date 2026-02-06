@@ -2,17 +2,13 @@ import { motion } from "framer-motion";
 import { 
   Trophy, 
   Target, 
-  Dumbbell, 
-  Gamepad2, 
   Swords,
   CircleDot,
-  Table2,
-  Flag
 } from "lucide-react";
 import Layout from "@/components/Layout";
 import { Badge } from "@/components/ui/badge";
 
-type SportCategory = "outdoor" | "indoor" | "esports";
+type SportCategory = "outdoor" | "indoor";
 
 interface Sport {
   name: string;
@@ -27,64 +23,35 @@ const sports: Sport[] = [
     name: "Cricket",
     icon: Trophy,
     category: "outdoor",
-    description: "The ultimate test of skill and strategy. 20-over format with knockout rounds.",
+    description: "The clash of willow and leather. Inter-Departmental Cricket Tournament where departments battle for supremacy in the ultimate test of skill, strategy, and team spirit.",
     players: "11 per team",
   },
   {
-    name: "Football",
+    name: "Volleyball",
     icon: Target,
     category: "outdoor",
-    description: "Fast-paced 7-a-side matches on our championship-grade turf.",
-    players: "7 per team",
-  },
-  {
-    name: "Tug of War",
-    icon: Dumbbell,
-    category: "outdoor",
-    description: "Raw strength meets team coordination in this classic showdown.",
-    players: "8 per team",
-  },
-  {
-    name: "Badminton",
-    icon: CircleDot,
-    category: "indoor",
-    description: "Singles and doubles events with professional BWF shuttlecocks.",
-    players: "1-2 per team",
+    description: "Spikes, blocks, and relentless rallies. Inter Hall/Hostel Volleyball Tournament — a showcase of power, coordination, and aerial dominance on the court.",
+    players: "6 per team",
   },
   {
     name: "Chess",
     icon: Swords,
     category: "indoor",
-    description: "Battle of minds. Rapid format with 15+10 time control.",
+    description: "Where minds wage war. Inter Hall/Hostel Chess Tournament — a silent battlefield of tactics, foresight, and calculated brilliance.",
     players: "1 per team",
   },
   {
-    name: "Table Tennis",
-    icon: Table2,
+    name: "Badminton",
+    icon: CircleDot,
     category: "indoor",
-    description: "Lightning-fast reflexes in singles and doubles categories.",
+    description: "Lightning reflexes meet pinpoint precision. Inter Hall/Hostel Badminton Tournament featuring fierce rallies and razor-sharp smashes.",
     players: "1-2 per team",
-  },
-  {
-    name: "BGMI",
-    icon: Gamepad2,
-    category: "esports",
-    description: "Battlegrounds Mobile India. Squad mode with multiple matches.",
-    players: "4 per team",
-  },
-  {
-    name: "Valorant",
-    icon: Flag,
-    category: "esports",
-    description: "Tactical 5v5 shooter. Best of 3 elimination rounds.",
-    players: "5 per team",
   },
 ];
 
 const categoryColors: Record<SportCategory, string> = {
   outdoor: "bg-emerald-500/20 text-emerald-400 border-emerald-500/30",
   indoor: "bg-amber-500/20 text-amber-400 border-amber-500/30",
-  esports: "bg-violet-500/20 text-violet-400 border-violet-500/30",
 };
 
 const containerVariants = {
@@ -164,7 +131,7 @@ const Events = () => {
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+            className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto"
           >
             {sports.map((sport) => (
               <motion.div
