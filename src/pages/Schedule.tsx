@@ -14,22 +14,28 @@ interface DaySchedule {
   [key: string]: ScheduleEvent[];
 }
 
+const dayLabels: Record<string, string> = {
+  "19th-feb": "19th February",
+  "20th-feb": "20th February",
+  "21st-feb": "21st February",
+};
+
 const scheduleData: DaySchedule = {
-  day1: [
+  "19th-feb": [
     { time: "09:00 AM", title: "Opening Ceremony", location: "Main Auditorium", category: "ceremony" },
     { time: "10:30 AM", title: "Cricket Qualifiers", location: "Sports Ground A", category: "outdoor" },
     { time: "11:00 AM", title: "Chess Round 1", location: "Indoor Hall B", category: "indoor" },
     { time: "02:00 PM", title: "Badminton Qualifiers", location: "Sports Complex", category: "indoor" },
     { time: "04:00 PM", title: "BGMI Registration", location: "Gaming Arena", category: "esports" },
   ],
-  day2: [
+  "20th-feb": [
     { time: "09:00 AM", title: "Football Quarter Finals", location: "Main Ground", category: "outdoor" },
     { time: "10:00 AM", title: "Table Tennis Semis", location: "Indoor Hall A", category: "indoor" },
     { time: "12:00 PM", title: "Cricket Semi Finals", location: "Sports Ground A", category: "outdoor" },
     { time: "03:00 PM", title: "BGMI Showdown", location: "Gaming Arena", category: "esports" },
     { time: "05:00 PM", title: "Tug of War Finals", location: "Main Ground", category: "outdoor" },
   ],
-  day3: [
+  "21st-feb": [
     { time: "09:00 AM", title: "Valorant Finals", location: "Gaming Arena", category: "esports" },
     { time: "11:00 AM", title: "Cricket Finals", location: "Main Stadium", category: "outdoor" },
     { time: "02:00 PM", title: "Football Finals", location: "Main Ground", category: "outdoor" },
@@ -46,7 +52,7 @@ const categoryBadgeColors: Record<string, string> = {
 };
 
 const Schedule = () => {
-  const [activeDay, setActiveDay] = useState("day1");
+  const [activeDay, setActiveDay] = useState("19th-feb");
 
   return (
     <Layout>
@@ -84,13 +90,13 @@ const Schedule = () => {
               className="flex justify-center mb-12"
             >
               <TabsList className="bg-obsidian/60 backdrop-blur-xl border border-glass-border/20 p-1">
-                {["day1", "day2", "day3"].map((day, index) => (
+                {Object.keys(dayLabels).map((day) => (
                   <TabsTrigger
                     key={day}
                     value={day}
-                    className="font-display px-8 py-3 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground transition-all duration-300"
+                    className="font-display px-6 py-3 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground transition-all duration-300"
                   >
-                    Day {index + 1}
+                    {dayLabels[day]}
                   </TabsTrigger>
                 ))}
               </TabsList>
