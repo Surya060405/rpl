@@ -1,59 +1,44 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import Layout from "@/components/Layout";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import ScorpionLogo from "@/components/ScorpionLogo";
 
-interface ScheduleEvent {
-  time: string;
-  title: string;
-  location: string;
-  category: string;
+interface DayInfo {
+  day: string;
+  date: string;
+  highlights: string[];
 }
 
-interface DaySchedule {
-  [key: string]: ScheduleEvent[];
-}
-
-const dayLabels: Record<string, string> = {
-  "19th-feb": "19th February",
-  "20th-feb": "20th February",
-  "21st-feb": "21st February",
-};
-
-const scheduleData: DaySchedule = {
-  "19th-feb": [
-    { time: "09:00 AM", title: "Opening Ceremony", location: "Main Auditorium", category: "ceremony" },
-    { time: "10:30 AM", title: "Cricket Qualifiers", location: "Sports Ground A", category: "outdoor" },
-    { time: "11:00 AM", title: "Chess Round 1", location: "Indoor Hall B", category: "indoor" },
-    { time: "02:00 PM", title: "Badminton Qualifiers", location: "Sports Complex", category: "indoor" },
-    { time: "04:00 PM", title: "BGMI Registration", location: "Gaming Arena", category: "esports" },
-  ],
-  "20th-feb": [
-    { time: "09:00 AM", title: "Football Quarter Finals", location: "Main Ground", category: "outdoor" },
-    { time: "10:00 AM", title: "Table Tennis Semis", location: "Indoor Hall A", category: "indoor" },
-    { time: "12:00 PM", title: "Cricket Semi Finals", location: "Sports Ground A", category: "outdoor" },
-    { time: "03:00 PM", title: "BGMI Showdown", location: "Gaming Arena", category: "esports" },
-    { time: "05:00 PM", title: "Tug of War Finals", location: "Main Ground", category: "outdoor" },
-  ],
-  "21st-feb": [
-    { time: "09:00 AM", title: "Valorant Finals", location: "Gaming Arena", category: "esports" },
-    { time: "11:00 AM", title: "Cricket Finals", location: "Main Stadium", category: "outdoor" },
-    { time: "02:00 PM", title: "Football Finals", location: "Main Ground", category: "outdoor" },
-    { time: "04:00 PM", title: "Award Ceremony", location: "Main Auditorium", category: "ceremony" },
-    { time: "06:00 PM", title: "Closing Celebration", location: "Central Lawn", category: "ceremony" },
-  ],
-};
-
-const categoryBadgeColors: Record<string, string> = {
-  ceremony: "bg-rose-500/20 text-rose-400",
-  outdoor: "bg-emerald-500/20 text-emerald-400",
-  indoor: "bg-amber-500/20 text-amber-400",
-  esports: "bg-violet-500/20 text-violet-400",
-};
+const timelineData: DayInfo[] = [
+  {
+    day: "Day 1",
+    date: "19th February",
+    highlights: [
+      "The War Begins",
+      "Inauguration & Opening Ceremony",
+      "First Round Clashes",
+    ],
+  },
+  {
+    day: "Day 2",
+    date: "20th February",
+    highlights: [
+      "The Heat Rises",
+      "Knockout & Quarter Finals",
+      "Esports Showdowns Ignite",
+    ],
+  },
+  {
+    day: "Day 3",
+    date: "21st February",
+    highlights: [
+      "The Grand Finale",
+      "Championship Battles Conclude",
+      "Victory Celebration & Awards",
+    ],
+  },
+];
 
 const Schedule = () => {
-  const [activeDay, setActiveDay] = useState("19th-feb");
-
   return (
     <Layout>
       {/* Header */}
@@ -73,111 +58,92 @@ const Schedule = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto"
           >
-            Three days of intense competition. Plan your attendance and never miss a moment.
+            Three days of intense competition. Gear up for the ultimate showdown.
           </motion.p>
         </div>
       </section>
 
-      {/* Schedule Tabs */}
+      {/* Timeline */}
       <section className="pb-32">
         <div className="container mx-auto px-4">
-          <Tabs value={activeDay} onValueChange={setActiveDay} className="w-full">
-            {/* Tab Navigation */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="flex justify-center mb-12"
-            >
-              <TabsList className="bg-obsidian/60 backdrop-blur-xl border border-glass-border/20 p-1">
-                {Object.keys(dayLabels).map((day) => (
-                  <TabsTrigger
-                    key={day}
-                    value={day}
-                    className="font-display px-6 py-3 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground transition-all duration-300"
+          <div className="relative max-w-4xl mx-auto">
+            {/* Vertical line */}
+            <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary via-primary/60 to-transparent" />
+
+            {timelineData.map((item, index) => {
+              const isLeft = index % 2 === 0;
+
+              return (
+                <motion.div
+                  key={item.day}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.5, delay: index * 0.15 }}
+                  className="relative mb-20 last:mb-0"
+                >
+                  {/* Scorpion node */}
+                  <div className="absolute left-6 md:left-1/2 -translate-x-1/2 z-10 w-12 h-12 rounded-full bg-background border-2 border-primary shadow-[0_0_20px_hsl(var(--primary)/0.5)] flex items-center justify-center">
+                    <ScorpionLogo size={28} />
+                  </div>
+
+                  {/* Content row */}
+                  <div
+                    className={`flex items-start ${
+                      isLeft ? "md:flex-row" : "md:flex-row-reverse"
+                    }`}
                   >
-                    {dayLabels[day]}
-                  </TabsTrigger>
-                ))}
-              </TabsList>
-            </motion.div>
-
-            {/* Tab Content */}
-            {Object.entries(scheduleData).map(([day, events]) => (
-              <TabsContent key={day} value={day} className="mt-0">
-                <AnimatePresence mode="wait">
-                  {activeDay === day && (
-                    <motion.div
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: -20 }}
-                      transition={{ duration: 0.4 }}
-                      className="max-w-3xl mx-auto"
+                    {/* Card side */}
+                    <div
+                      className={`ml-20 md:ml-0 md:w-[calc(50%-2.5rem)] ${
+                        isLeft ? "md:pr-0" : "md:pl-0"
+                      }`}
                     >
-                      {/* Timeline */}
-                      <div className="relative">
-                        {/* Vertical line */}
-                        <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary via-primary/50 to-transparent" />
+                      <div className="relative rounded-lg border border-primary/40 bg-obsidian/70 backdrop-blur-md p-6 shadow-[0_0_25px_hsl(var(--primary)/0.15)] hover:shadow-[0_0_35px_hsl(var(--primary)/0.3)] transition-shadow duration-500">
+                        {/* Day title */}
+                        <h3 className="font-display text-2xl md:text-3xl font-bold text-primary glow-text text-center mb-5 uppercase tracking-wider">
+                          {item.day}
+                        </h3>
 
-                        {/* Events */}
-                        {events.map((event, index) => (
-                          <motion.div
-                            key={event.title}
-                            initial={{ opacity: 0, y: 30 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: index * 0.1 }}
-                            className={`relative flex items-start gap-6 mb-8 ${
-                              index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                            }`}
-                          >
-                            {/* Time marker */}
-                            <div
-                              className={`hidden md:block w-[calc(50%-2rem)] text-right ${
-                                index % 2 === 0 ? "md:text-right" : "md:text-left"
-                              }`}
+                        {/* Highlights */}
+                        <div className="space-y-3">
+                          {item.highlights.map((text) => (
+                            <p
+                              key={text}
+                              className="text-muted-foreground text-sm md:text-base text-center uppercase tracking-wide"
                             >
-                              <span className="font-display text-primary font-semibold">
-                                {event.time}
-                              </span>
-                            </div>
-
-                            {/* Node */}
-                            <div className="absolute left-4 md:left-1/2 -translate-x-1/2 w-3 h-3 bg-primary rounded-full border-2 border-background shadow-[0_0_15px_hsl(var(--primary))]" />
-
-                            {/* Event card */}
-                            <div
-                              className={`ml-10 md:ml-0 md:w-[calc(50%-2rem)] glass-card p-5 card-hover`}
-                            >
-                              <div className="md:hidden mb-2">
-                                <span className="font-display text-primary text-sm font-semibold">
-                                  {event.time}
-                                </span>
-                              </div>
-                              <div className="flex items-start justify-between gap-3 mb-2">
-                                <h3 className="font-display text-lg font-semibold">
-                                  {event.title}
-                                </h3>
-                                <span
-                                  className={`text-xs px-2 py-1 rounded-full capitalize ${
-                                    categoryBadgeColors[event.category]
-                                  }`}
-                                >
-                                  {event.category}
-                                </span>
-                              </div>
-                              <p className="text-muted-foreground text-sm">
-                                📍 {event.location}
-                              </p>
-                            </div>
-                          </motion.div>
-                        ))}
+                              {text}
+                            </p>
+                          ))}
+                        </div>
                       </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </TabsContent>
-            ))}
-          </Tabs>
+                    </div>
+
+                    {/* Spacer for center line */}
+                    <div className="hidden md:block w-20 shrink-0" />
+
+                    {/* Date side */}
+                    <div
+                      className={`hidden md:flex md:w-[calc(50%-2.5rem)] items-center ${
+                        isLeft ? "justify-start" : "justify-end"
+                      }`}
+                    >
+                      <span className="font-display text-xl md:text-2xl text-foreground/80 font-semibold tracking-wide">
+                        {item.date}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Mobile date */}
+                  <div className="md:hidden ml-20 mt-3">
+                    <span className="font-display text-base text-foreground/70 font-semibold">
+                      {item.date}
+                    </span>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
         </div>
       </section>
     </Layout>
