@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import ReminiscenceLogo from "@/assets/reminiscence-75.png";
 import { Link } from "react-router-dom";
 import { ArrowRight, IdCard, Trophy, Building2, Users, Scale, GraduationCap } from "lucide-react";
 import Layout from "@/components/Layout";
@@ -13,12 +14,12 @@ const rules = [
   },
   {
     icon: Trophy,
-    title: "Cricket - Department Wise",
-    description: "Cricket will be played Department Wise. All the departments must register their teams before the Tournament.",
+    title: "Inter-Departmental Sports",
+    description: "Cricket and Table Tennis will be played Department Wise. All the departments must register their teams before the Tournament.",
   },
   {
     icon: Building2,
-    title: "Other Sports - Hall/Hostel Wise",
+    title: "Inter-Hall/Hostel Sports",
     description: "All the other sports will be played Hall/Hostel wise. One person can play from any single Hall/Hostel only.",
   },
   {
@@ -73,14 +74,39 @@ const Home = ({ isLoading = false }: { isLoading?: boolean }) => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
+            className="flex flex-col items-center mt-20 sm:mt-24 md:mt-28 mb-8 sm:mb-12 md:mb-16 lg:mb-20"
           >
-            <p className={`text-lg md:text-xl text-muted-foreground mb-4 font-medium tracking-widest uppercase ${!isLoading ? 'typewriter' : 'opacity-0'}`}>
+            <p className={`text-sm sm:text-base md:text-lg lg:text-xl text-foreground font-medium tracking-widest uppercase ${!isLoading ? 'typewriter' : 'opacity-0'}`}>
               Richardson Hall Presents
             </p>
-            <h1 className="font-display text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-bold tracking-wider mb-4 glow-text">
+          </motion.div>
+
+          {/* Reminiscence Logo and "x" separator */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 3.5 }}
+            className="flex flex-col items-center mb-2 sm:mb-4 px-4"
+          >
+            <img
+              src={ReminiscenceLogo}
+              alt="Reminiscence"
+              className="h-20 sm:h-28 md:h-36 lg:h-24 w-auto max-w-full object-contain"
+            />
+            <span className="text-muted-foreground text-lg sm:text-xl mt-1 sm:mt-2 italic font-light">x</span>
+          </motion.div>
+
+          {/* RPL 5.0 Title */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 4.0 }}
+            className="px-2"
+          >
+            <h1 className="font-display text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-bold tracking-wider mb-2 lg:mb-4 glow-text">
               <span className="text-primary">RPL 5.0</span>
             </h1>
-            <p className="text-xl md:text-2xl text-foreground/90 mb-10 font-light tracking-wide">
+            <p className="text-sm sm:text-lg md:text-xl lg:text-2xl text-foreground/90 mb-6 md:mb-10 font-light tracking-wide">
               Rabindranath Tagore Premier League
             </p>
           </motion.div>
@@ -88,8 +114,8 @@ const Home = ({ isLoading = false }: { isLoading?: boolean }) => {
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="text-lg md:text-xl text-muted-foreground mb-10 font-light tracking-wide italic"
+            transition={{ duration: 0.6, delay: 4.5 }}
+            className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 md:mb-10 font-light tracking-wide italic"
           >
             Sting the Competition
           </motion.p>
@@ -97,33 +123,19 @@ const Home = ({ isLoading = false }: { isLoading?: boolean }) => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.7 }}
+            transition={{ duration: 0.6, delay: 4.7 }}
           >
             <Link
               to="/events"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-foreground text-background font-display font-semibold tracking-wider rounded-lg glow-button hover:scale-105 transition-transform duration-300"
+              className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 bg-foreground text-background font-display text-sm sm:text-base font-semibold tracking-wider rounded-lg glow-button hover:scale-105 transition-transform duration-300"
             >
               Explore Events
-              <ArrowRight size={20} />
+              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
             </Link>
           </motion.div>
         </div>
 
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.5, duration: 1 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
-        >
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="w-6 h-10 border-2 border-muted-foreground/50 rounded-full flex justify-center pt-2"
-          >
-            <motion.div className="w-1.5 h-1.5 bg-primary rounded-full" />
-          </motion.div>
-        </motion.div>
+
       </section>
 
       {/* About Section */}

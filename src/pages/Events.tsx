@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
-import { 
-  Trophy, 
-  Volleyball, 
-  Crown,
-  Feather,
+import {
+  Trophy,
+  Volleyball
 } from "lucide-react";
+import { MdSportsCricket, MdSportsBasketball } from "react-icons/md";
+import { FaTableTennis } from "react-icons/fa";
 import Layout from "@/components/Layout";
 import { Badge } from "@/components/ui/badge";
 
@@ -21,7 +21,7 @@ interface Sport {
 const sports: Sport[] = [
   {
     name: "Cricket",
-    icon: Trophy,
+    icon: MdSportsCricket,
     category: "outdoor",
     description: "The clash of willow and leather. Inter-Departmental Cricket Tournament where departments battle for supremacy in the ultimate test of skill, strategy, and team spirit.",
     players: "11 per team",
@@ -34,18 +34,18 @@ const sports: Sport[] = [
     players: "6 per team",
   },
   {
-    name: "Chess",
-    icon: Crown,
+    name: "Table Tennis",
+    icon: FaTableTennis,
     category: "indoor",
-    description: "Where minds wage war. Inter Hall/Hostel Chess Tournament — a silent battlefield of tactics, foresight, and calculated brilliance.",
-    players: "3 per team",
+    description: "Lightning reflexes meet pinpoint precision. Inter-Departmental Table Tennis Tournament featuring fierce rallies and razor-sharp smashes.",
+    players: "5 per team",
   },
   {
-    name: "Badminton",
-    icon: Feather,
-    category: "indoor",
-    description: "Lightning reflexes meet pinpoint precision. Inter Hall/Hostel Badminton Tournament featuring fierce rallies and razor-sharp smashes.",
-    players: "5 per team",
+    name: "Basketball",
+    icon: MdSportsBasketball,
+    category: "outdoor",
+    description: "High-flying dunks and deep threes. Inter Hall/Hostel Basketball Tournament — a fast-paced game of teamwork, agility, and precision.",
+    players: "3 per team",
   },
 ];
 
@@ -96,7 +96,7 @@ const Events = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto"
           >
-            Choose your battleground. From traditional sports to digital warfare, 
+            Choose your battleground. From traditional sports to digital warfare,
             every arena awaits your conquest.
           </motion.p>
         </div>
