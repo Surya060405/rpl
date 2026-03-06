@@ -35,15 +35,10 @@ const AboutSection = () => {
                 The <span className="text-primary">Legacy</span>
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Rabindranath Premier League stands as a testament to athletic excellence
-                and competitive spirit. For over a decade, we have been the premier
-                inter-departmental sports tournament, bringing together the finest
-                athletes from every corner of our institution.
+                The Rabindranath Tagore Premier League (RPL) is the most anticipated annual sports extravaganza at IIEST, Shibpur, proudly organized by Richardson Hall, the oldest and most prestigious residential hall on campus. More than just a tournament, RPL is a celebration of sportsmanship, competitive spirit, and unbreakable camaraderie, bringing together students from every department and hall/hostel under one roof of passion, energy, and rivalry.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                From the thundering cricket pitches to the strategic chess boards,
-                from intense football matches to the digital battlegrounds of esports —
-                RPL is where champions are forged and legends are born.
+                Now in its fifth edition, RPL 5.0 arrives bigger, fiercer, and louder than ever, a testament to Richardson Hall's enduring commitment to nurturing not just engineers, but well-rounded champions. Let the games begin.
               </p>
             </div>
           </div>
@@ -101,16 +96,19 @@ const AboutSection = () => {
                 Richardson <span className="text-primary">Hall</span>
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                It was a 3 storey Hostel and was possibly built in early sixties.
-                Here, only final and pre-final years' students normally stayed.
-                The design was different from that of Downing Hall as well as
-                Hostels 7-16. It had 3 wings at 120 degrees separation.
+                Richardson Hall stands as the oldest and one of the most prestigious halls at IIEST, Shibpur, a timeless Hall that has been shaping lives and legacy since 1951, and will continue to do so till infinity.
               </p>
-              <p className="text-muted-foreground leading-relaxed">
-                Usually, the final year boys stayed at the 2nd floor, which was
-                more airy. The Hostel had no fans. It was located near the main
-                gate and a slushy pond existed near it. Facing this Hostel is the
-                ground "Lords".
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                Nestled at the most prime location within the campus. It sits gracefully near the iconic Centenary Alumni Gate, the Main Gate of IIEST, Shibpur, with the sprawling Lords Ground stretching out before it and the distinguished Netaji Bhavan standing close by. Every corner of its surroundings speaks of history, pride, and purpose.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                Beyond its architecture and location, what truly sets Richardson Hall apart is the strength of its alumni connections. The bonds forged within its walls have transcended time, creating a network of accomplished individuals who carry the spirit of Richardson Hall wherever they go, a legacy not just of bricks and mortar, but of brotherhood, excellence, and belonging.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                To be a part of Richardson Hall is to embrace a way of life, one that is lived with passion, pride, and an unshakable sense of identity. As the motto of the Hall boldly declares, "Live Rich, Die Rich", a reminder that those who walk these halls don't just reside here, they carry its richness within them for a lifetime.
+              </p>
+              <p className="text-primary font-display font-semibold italic text-xl">
+                Rich Rulzz... and it always will.
               </p>
             </div>
           </div>

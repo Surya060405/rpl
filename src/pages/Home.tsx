@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import ReminiscenceLogo from "@/assets/reminiscence-75.png";
 import { Link } from "react-router-dom";
-import { ArrowRight, IdCard, Trophy, Building2, Users, Scale, GraduationCap } from "lucide-react";
+import { ArrowRight, IdCard, Trophy, Building2, Users, Scale, GraduationCap, ShieldCheck } from "lucide-react";
 import Layout from "@/components/Layout";
 import HeroFogScene from "@/components/HeroFogScene";
 import AboutSection from "@/components/AboutSection";
@@ -14,18 +14,23 @@ const rules = [
   },
   {
     icon: Trophy,
-    title: "Inter-Departmental Sports",
-    description: "Cricket and Table Tennis will be played Department Wise. All the departments must register their teams before the Tournament.",
+    title: "Boys — Inter-Departmental",
+    description: "All sports for boys will be conducted Department Wise. All departments must register their teams before the tournament begins.",
   },
   {
     icon: Building2,
-    title: "Inter-Hall/Hostel Sports",
-    description: "All the other sports will be played Hall/Hostel wise. One person can play from any single Hall/Hostel only.",
+    title: "Girls — Inter-Hostel",
+    description: "All sports for girls will be conducted Inter-Hostel wise, except Badminton which is conducted Department Wise for both boys and girls.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Badminton — All Departments",
+    description: "Badminton will be conducted Department Wise for both boys and girls. Departments must register their teams separately.",
   },
   {
     icon: Users,
     title: "Day Scholars",
-    description: "Day Scholars can register in tournament by contacting with respective JMCR/Sports Secretary of any Hall/Hostel.",
+    description: "Day Scholars can register in the tournament by contacting the respective JMCR/Sports Secretary of any Hall/Hostel.",
   },
   {
     icon: GraduationCap,
