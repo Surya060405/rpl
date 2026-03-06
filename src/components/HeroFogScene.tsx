@@ -1,8 +1,8 @@
 import { useRef, useMemo, useCallback } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import * as THREE from "three";
+import { useIsMobile } from "@/hooks/use-mobile";
 
-const PARTICLE_COUNT = 600;
 const FOG_COLOR = new THREE.Color("#4169E1");
 
 // Custom shader for soft glowing particles
@@ -35,19 +35,21 @@ const fragmentShader = `
   }
 `;
 
-function FogParticles() {
+function FogParticles({ isMobile }: { isMobile: boolean }) {
   const points = useRef<THREE.Points>(null);
   const mouseRef = useRef({ x: 0, y: 0 });
   const { viewport } = useThree();
 
+  const particleCount = isMobile ? 100 : 600;
+
   // Generate initial particle data
   const { positions, scales, opacities, velocities } = useMemo(() => {
-    const positions = new Float32Array(PARTICLE_COUNT * 3);
-    const scales = new Float32Array(PARTICLE_COUNT);
-    const opacities = new Float32Array(PARTICLE_COUNT);
-    const velocities = new Float32Array(PARTICLE_COUNT * 3);
+    const positions = new Float32Array(particleCount * 3);
+    const scales = new Float32Array(particleCount);
+    const opacities = new Float32Array(particleCount);
+    const velocities = new Float32Array(particleCount * 3);
 
-    for (let i = 0; i < PARTICLE_COUNT; i++) {
+    for (let i = 0; i < particleCount; i++) {
       const i3 = i * 3;
 
       // Spread particles across a wide volume
@@ -68,7 +70,7 @@ function FogParticles() {
     }
 
     return { positions, scales, opacities, velocities };
-  }, []);
+  }, [particleCount]);
 
   // Shader material uniforms
   const uniforms = useMemo(
@@ -99,7 +101,7 @@ function FogParticles() {
     const opacityArray = geometry.attributes.aOpacity.array as Float32Array;
     const time = state.clock.elapsedTime;
 
-    for (let i = 0; i < PARTICLE_COUNT; i++) {
+    for (let i = 0; i < particleCount; i++) {
       const i3 = i * 3;
 
       // Base drift movement
@@ -169,19 +171,19 @@ function FogParticles() {
         <bufferGeometry>
           <bufferAttribute
             attach="attributes-position"
-            count={PARTICLE_COUNT}
+            count={particleCount}
             array={positions}
             itemSize={3}
           />
           <bufferAttribute
             attach="attributes-aScale"
-            count={PARTICLE_COUNT}
+            count={particleCount}
             array={scales}
             itemSize={1}
           />
           <bufferAttribute
             attach="attributes-aOpacity"
-            count={PARTICLE_COUNT}
+            count={particleCount}
             array={opacities}
             itemSize={1}
           />
@@ -200,11 +202,13 @@ function FogParticles() {
 }
 
 // Fog cloud meshes for thicker volumetric feel
-function FogClouds() {
+function FogClouds({ isMobile }: { isMobile: boolean }) {
   const cloudsRef = useRef<THREE.Group>(null);
 
+  const cloudCount = isMobile ? 4 : 12;
+
   const cloudData = useMemo(() => {
-    return Array.from({ length: 12 }, (_, i) => ({
+    return Array.from({ length: cloudCount }, (_, i) => ({
       position: [
         (Math.random() - 0.5) * 16,
         (Math.random() - 0.5) * 10,
@@ -214,7 +218,7 @@ function FogClouds() {
       speed: Math.random() * 0.3 + 0.1,
       offset: Math.random() * Math.PI * 2,
     }));
-  }, []);
+  }, [cloudCount]);
 
   useFrame((state) => {
     if (!cloudsRef.current) return;
@@ -253,6 +257,8 @@ function FogClouds() {
 }
 
 const HeroFogScene = () => {
+  const isMobile = useIsMobile();
+
   return (
     <div className="absolute inset-0 bg-[hsl(228,84%,2%)]">
       {/* Top fade for smooth navbar transition */}
@@ -260,7 +266,7 @@ const HeroFogScene = () => {
 
       <Canvas
         camera={{ position: [0, 0, 6], fov: 75 }}
-        dpr={[1, 2]}
+        dpr={isMobile ? [0.5, 1] : [1, 2]}
         gl={{
           antialias: false,
           alpha: false,
@@ -270,8 +276,8 @@ const HeroFogScene = () => {
       >
         <color attach="background" args={["#020514"]} />
         <fog attach="fog" args={["#020514", 5, 20]} />
-        <FogParticles />
-        <FogClouds />
+        <FogParticles isMobile={isMobile} />
+        <FogClouds isMobile={isMobile} />
       </Canvas>
     </div>
   );

@@ -1,19 +1,26 @@
-import * as React from "react";
-
-const MOBILE_BREAKPOINT = 768;
+import { useState, useEffect } from "react";
 
 export function useIsMobile() {
-  const [isMobile, setIsMobile] = React.useState<boolean | undefined>(undefined);
+  const [isMobile, setIsMobile] = useState(false);
 
-  React.useEffect(() => {
-    const mql = window.matchMedia(`(max-width: ${MOBILE_BREAKPOINT - 1}px)`);
-    const onChange = () => {
-      setIsMobile(window.innerWidth < MOBILE_BREAKPOINT);
+  useEffect(() => {
+    // Check if window is defined (for SSR safety, though this is Vite SPA)
+    if (typeof window === "undefined") return;
+
+    const checkIsMobile = () => {
+      // 768px is the standard md breakpoint in Tailwind
+      setIsMobile(window.innerWidth < 768);
     };
-    mql.addEventListener("change", onChange);
-    setIsMobile(window.innerWidth < MOBILE_BREAKPOINT);
-    return () => mql.removeEventListener("change", onChange);
+
+    // Initial check
+    checkIsMobile();
+
+    // Add resize listener
+    window.addEventListener("resize", checkIsMobile);
+
+    // Cleanup
+    return () => window.removeEventListener("resize", checkIsMobile);
   }, []);
 
-  return !!isMobile;
+  return isMobile;
 }
