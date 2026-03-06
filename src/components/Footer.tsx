@@ -5,7 +5,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: Instagram, href: "https://www.instagram.com/richardson_premiere_league/", label: "Instagram" },
+    { icon: Instagram, href: "https://www.instagram.com/rich_rulzz?igsh=MTNvYmxkd2VqbXVwMA==", label: "Instagram" },
   ];
 
   return (
