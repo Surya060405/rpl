@@ -54,6 +54,7 @@ interface Sport {
   category: SportCategory;
   description: string;
   players: string;
+  venue: string;
 }
 
 const sports: Sport[] = [
@@ -64,6 +65,7 @@ const sports: Sport[] = [
     category: "outdoor",
     description: "The clash of willow and leather. Boys: Inter-Departmental | Girls: Inter-Hostel. Departments and Hostels battle for supremacy in the ultimate test of skill, strategy, and team spirit.",
     players: "11 + 4 per team",
+    venue: "Lords Ground",
   },
   {
     name: "Volleyball",
@@ -72,6 +74,7 @@ const sports: Sport[] = [
     category: "outdoor",
     description: "Spikes, blocks, and relentless rallies. Boys: Inter-Departmental | Girls: Inter-Hostel. A showcase of power, coordination, and aerial dominance on the court.",
     players: "6 + 2 per team",
+    venue: "Volleyball Court",
   },
   {
     name: "Table Tennis",
@@ -80,6 +83,7 @@ const sports: Sport[] = [
     category: "indoor",
     description: "Lightning reflexes meet pinpoint precision. Boys: Inter-Departmental | Girls: Inter-Hostel. Fierce rallies and razor-sharp smashes across the table.",
     players: "5 per team",
+    venue: "Richardson Hall",
   },
   {
     name: "Badminton",
@@ -88,6 +92,7 @@ const sports: Sport[] = [
     category: "indoor",
     description: "Swift smashes and delicate drops. Mixed Inter-Departmental — 3 Boys + 2 Girls per team. Departments compete for supremacy with lightning-fast reflexes on the court.",
     players: "5 per team (3M + 2F)",
+    venue: "Netaji Bhavan",
   },
 ];
 
@@ -213,10 +218,16 @@ const Events = () => {
                       {sport.description}
                     </p>
 
-                    {/* Players info */}
-                    <div className="flex items-center gap-2 text-sm">
-                      <span className="text-primary font-medium">Players:</span>
-                      <span className="text-muted-foreground">{sport.players}</span>
+                    {/* Players & Venue info */}
+                    <div className="flex flex-col gap-2 text-sm mt-4">
+                      <div className="flex items-center gap-2">
+                        <svg className="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+                        <span className="text-muted-foreground">{sport.players}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <svg className="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                        <span className="text-muted-foreground">{sport.venue}</span>
+                      </div>
                     </div>
 
                     {/* Register CTA */}

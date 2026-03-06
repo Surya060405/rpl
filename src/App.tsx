@@ -9,7 +9,6 @@ import LoadingScreen from "@/components/LoadingScreen";
 import Home from "./pages/Home";
 import Events from "./pages/Events";
 import Schedule from "./pages/Schedule";
-import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import Cricket from "./pages/sports/Cricket";
 import VolleyballPage from "./pages/sports/Volleyball";
@@ -40,7 +39,6 @@ const App = () => {
               <Route path="/events/table-tennis" element={<TableTennisPage />} />
               <Route path="/events/badminton" element={<BadmintonPage />} />
               <Route path="/schedule" element={<Schedule />} />
-              <Route path="/contact" element={<Contact />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

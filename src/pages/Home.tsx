@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
 import ReminiscenceLogo from "@/assets/reminiscence-75.png";
-import { Link } from "react-router-dom";
-import { ArrowRight, IdCard, Trophy, Building2, Users, Scale, GraduationCap, ShieldCheck } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
+import { ArrowRight, IdCard, Trophy, Building2, Users, Scale, GraduationCap, ShieldCheck, Phone } from "lucide-react";
 import Layout from "@/components/Layout";
 import HeroFogScene from "@/components/HeroFogScene";
 import AboutSection from "@/components/AboutSection";
+import { useEffect } from "react";
 
 const rules = [
   {
@@ -67,6 +68,17 @@ const itemVariants = {
 };
 
 const Home = ({ isLoading = false }: { isLoading?: boolean }) => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash === '#contact') {
+      const element = document.getElementById('contact');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
+
   return (
     <Layout>
       {/* Hero Section */}
@@ -177,6 +189,48 @@ const Home = ({ isLoading = false }: { isLoading?: boolean }) => {
                 <p className="text-muted-foreground text-sm leading-relaxed">
                   {rule.description}
                 </p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-20 md:py-32 bg-black/20">
+        <div className="container mx-auto px-4">
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="font-display text-3xl md:text-5xl font-bold text-center mb-16"
+          >
+            Contact <span className="text-primary">Us</span>
+          </motion.h2>
+
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto"
+          >
+            {[
+              { name: "Harsh Raj Himanshu", phone: "6204890231" },
+              { name: "Talapaneni Varun Chowdary", phone: "6304833734" }
+            ].map((person) => (
+              <motion.div
+                key={person.name}
+                variants={itemVariants}
+                className="glass-card flex flex-col items-center p-8 text-center glow-border"
+              >
+                <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mb-6">
+                  <Phone className="w-8 h-8 text-primary" />
+                </div>
+                <h3 className="font-display text-xl md:text-2xl font-semibold mb-2">{person.name}</h3>
+                <a href={`tel:+91${person.phone}`} className="text-muted-foreground hover:text-primary transition-colors text-lg tracking-wider">
+                  +91 {person.phone}
+                </a>
               </motion.div>
             ))}
           </motion.div>
