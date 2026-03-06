@@ -5,36 +5,20 @@ import ScorpionLogo from "@/components/ScorpionLogo";
 interface DayInfo {
   day: string;
   date: string;
-  highlights: string[];
 }
 
 const timelineData: DayInfo[] = [
   {
     day: "Day 1",
-    date: "19th February",
-    highlights: [
-      "The War Begins",
-      "Inauguration & Opening Ceremony",
-      "First Round Clashes",
-    ],
+    date: "9th March, 2026",
   },
   {
     day: "Day 2",
-    date: "20th February",
-    highlights: [
-      "The Heat Rises",
-      "Knockout & Quarter Finals",
-      "Esports Showdowns Ignite",
-    ],
+    date: "10th March, 2026",
   },
   {
     day: "Day 3",
-    date: "21st February",
-    highlights: [
-      "The Grand Finale",
-      "Championship Battles Conclude",
-      "Victory Celebration & Awards",
-    ],
+    date: "11th March, 2026",
   },
 ];
 
@@ -89,33 +73,19 @@ const Schedule = () => {
 
                   {/* Content row */}
                   <div
-                    className={`flex items-start ${
-                      isLeft ? "md:flex-row" : "md:flex-row-reverse"
-                    }`}
+                    className={`flex items-start ${isLeft ? "md:flex-row" : "md:flex-row-reverse"
+                      }`}
                   >
                     {/* Card side */}
                     <div
-                      className={`ml-20 md:ml-0 md:w-[calc(50%-2.5rem)] ${
-                        isLeft ? "md:pr-0" : "md:pl-0"
-                      }`}
+                      className={`ml-20 md:ml-0 md:w-[calc(50%-2.5rem)] ${isLeft ? "md:pr-0" : "md:pl-0"
+                        }`}
                     >
                       <div className="relative rounded-lg border border-primary/40 bg-obsidian/70 backdrop-blur-md p-6 shadow-[0_0_25px_hsl(var(--primary)/0.15)] hover:shadow-[0_0_35px_hsl(var(--primary)/0.3)] transition-shadow duration-500">
                         {/* Day title */}
-                        <h3 className="font-display text-2xl md:text-3xl font-bold text-primary glow-text text-center mb-5 uppercase tracking-wider">
+                        <h3 className="font-display text-2xl md:text-3xl font-bold text-primary glow-text text-center uppercase tracking-wider">
                           {item.day}
                         </h3>
-
-                        {/* Highlights */}
-                        <div className="space-y-3">
-                          {item.highlights.map((text) => (
-                            <p
-                              key={text}
-                              className="text-muted-foreground text-sm md:text-base text-center uppercase tracking-wide"
-                            >
-                              {text}
-                            </p>
-                          ))}
-                        </div>
                       </div>
                     </div>
 
@@ -124,9 +94,8 @@ const Schedule = () => {
 
                     {/* Date side */}
                     <div
-                      className={`hidden md:flex md:w-[calc(50%-2.5rem)] items-center ${
-                        isLeft ? "justify-start" : "justify-end"
-                      }`}
+                      className={`hidden md:flex md:w-[calc(50%-2.5rem)] items-center ${isLeft ? "justify-start" : "justify-end"
+                        }`}
                     >
                       <span className="font-display text-xl md:text-2xl text-foreground/80 font-semibold tracking-wide">
                         {item.date}
