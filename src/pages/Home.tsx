@@ -4,6 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import { ArrowRight, IdCard, Trophy, Building2, Users, Scale, GraduationCap, ShieldCheck, Phone } from "lucide-react";
 import Layout from "@/components/Layout";
 import HeroFogScene from "@/components/HeroFogScene";
+import ParallaxVideoSection from "@/components/ParallaxVideoSection";
 import AboutSection from "@/components/AboutSection";
 import { useEffect } from "react";
 
@@ -154,6 +155,9 @@ const Home = ({ isLoading = false }: { isLoading?: boolean }) => {
 
 
       </section>
+
+      {/* Cinematic Parallax Video */}
+      <ParallaxVideoSection />
 
       {/* About Section */}
       <AboutSection />
