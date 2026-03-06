@@ -92,7 +92,7 @@ const Home = ({ isLoading = false }: { isLoading?: boolean }) => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex flex-col items-center mt-20 sm:mt-24 md:mt-28 mb-8 sm:mb-12 md:mb-16 lg:mb-20"
+            className="flex flex-col items-center mt-6 sm:mt-24 md:mt-28 mb-4 sm:mb-12 md:mb-16 lg:mb-20"
           >
             <p className={`text-sm sm:text-base md:text-lg lg:text-xl text-foreground font-medium tracking-widest uppercase ${!isLoading ? 'typewriter' : 'opacity-0'}`}>
               Richardson Hall Presents

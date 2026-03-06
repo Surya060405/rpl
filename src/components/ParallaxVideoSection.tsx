@@ -29,7 +29,7 @@ const ParallaxVideoSection = () => {
     return (
         <section
             ref={containerRef}
-            className="relative py-24 md:py-40 w-full overflow-hidden flex justify-center items-center"
+            className="relative py-12 md:py-40 w-full overflow-hidden flex justify-center items-center"
             style={{ perspective: "2000px" }}
         >
             {/* Background ambient glow */}
