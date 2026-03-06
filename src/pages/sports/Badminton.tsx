@@ -49,6 +49,7 @@ const BadmintonPage = () => (
         boyFormat="Inter-Departmental (Mixed)"
         girlFormat="Inter-Departmental (Mixed)"
         rules={rules}
+        formLink="https://docs.google.com/forms/d/1mIRO03mYFcFhaOLc9xL8_SkdarYPSnxeaRqWo843cjQ/edit"
     />
 );
 

@@ -22,6 +22,7 @@ const TableTennisPage = () => (
         boyFormat="Inter-Departmental"
         girlFormat="Inter-Hostel"
         rules={rules}
+        formLink="https://forms.gle/dCSmgnSu2phQc3mXA"
     />
 );
 

@@ -22,6 +22,7 @@ const VolleyballPage = () => (
         boyFormat="Inter-Departmental"
         girlFormat="Inter-Hostel"
         rules={rules}
+        formLink="https://docs.google.com/forms/d/e/1FAIpQLSebrW3r17mW-58HW1YZ9lmik0Hg3smDhI3zT4iNx39E-imvQg/viewform?usp=publish-editor"
     />
 );
 

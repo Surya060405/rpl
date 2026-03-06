@@ -23,6 +23,7 @@ const Cricket = () => (
         boyFormat="Inter-Departmental"
         girlFormat="Inter-Hostel"
         rules={rules}
+        formLink="https://docs.google.com/forms/d/118AoY1oh--rrCyikZAJH7kM2AddFw4EYb9Fp5vmskJ4/edit"
     />
 );
 

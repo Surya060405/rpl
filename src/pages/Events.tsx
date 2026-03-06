@@ -219,10 +219,12 @@ const Events = () => {
                       <span className="text-muted-foreground">{sport.players}</span>
                     </div>
 
-                    {/* Click hint */}
-                    <div className="mt-4 flex items-center gap-1 text-xs text-primary/60 group-hover:text-primary transition-colors duration-300">
-                      <span>View Details</span>
-                      <svg className="w-3 h-3 group-hover:translate-x-1 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                    {/* Register CTA */}
+                    <div className="mt-5">
+                      <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground text-xs font-semibold tracking-wider rounded-lg group-hover:bg-primary/90 transition-colors duration-300">
+                        Register
+                        <svg className="w-3 h-3 group-hover:translate-x-0.5 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                      </span>
                     </div>
                   </div>
                 </Link>
