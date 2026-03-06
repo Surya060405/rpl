@@ -176,7 +176,7 @@ const Home = ({ isLoading = false }: { isLoading?: boolean }) => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
-            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
           >
             {rules.map((rule, index) => (
               <motion.div
@@ -213,7 +213,7 @@ const Home = ({ isLoading = false }: { isLoading?: boolean }) => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
-            className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto"
+            className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto"
           >
             {[
               { name: "Harsh Raj Himanshu", phone: "6204890231" },

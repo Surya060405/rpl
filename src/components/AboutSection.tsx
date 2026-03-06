@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
 import ScorpionLogo from "@/components/ScorpionLogo";
 import richardsonHallImg from "@/assets/richardson-hall.png";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const AboutSection = () => {
+  const isMobile = useIsMobile();
+
   return (
     <section className="py-20 md:py-32">
       <div className="container mx-auto px-4">
@@ -27,8 +30,8 @@ const AboutSection = () => {
           <div className="relative">
             <div className="glass-card p-8 md:p-12 relative overflow-hidden">
               {/* Watermark */}
-              <div className="absolute -right-10 -bottom-10 opacity-5">
-                <ScorpionLogo size={200} />
+              <div className="absolute -right-5 md:-right-10 -bottom-5 md:-bottom-10 opacity-5">
+                <ScorpionLogo size={isMobile ? 120 : 200} />
               </div>
 
               <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">
@@ -51,8 +54,8 @@ const AboutSection = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative"
             >
-              <div className="absolute inset-0 bg-primary/20 blur-[80px] rounded-full" />
-              <ScorpionLogo size={300} className="relative z-10 animate-float" />
+              <div className="absolute inset-0 bg-primary/20 blur-[60px] md:blur-[80px] rounded-full" />
+              <ScorpionLogo size={isMobile ? 180 : 300} className="relative z-10 animate-float" />
             </motion.div>
           </div>
         </motion.div>
@@ -88,8 +91,8 @@ const AboutSection = () => {
           <div className="relative">
             <div className="glass-card p-8 md:p-12 relative overflow-hidden">
               {/* Watermark */}
-              <div className="absolute -right-10 -bottom-10 opacity-5">
-                <ScorpionLogo size={200} />
+              <div className="absolute -right-5 md:-right-10 -bottom-5 md:-bottom-10 opacity-5">
+                <ScorpionLogo size={isMobile ? 120 : 200} />
               </div>
 
               <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">
