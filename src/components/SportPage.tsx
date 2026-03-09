@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Users, ExternalLink, CheckCircle2, Info } from "lucide-react";
+import { ArrowLeft, Users, CheckCircle2, Calendar, Clock, MapPin } from "lucide-react";
 import Layout from "@/components/Layout";
 import { Badge } from "@/components/ui/badge";
 
@@ -16,6 +16,12 @@ interface SportPageProps {
     girlFormat: string;
     rules: string[];
     formLink?: string;
+    fixtures?: {
+        day: string;
+        match: string;
+        time: string;
+        venue: string;
+    }[];
 }
 
 const categoryColors: Record<SportCategory, string> = {
@@ -50,6 +56,7 @@ const SportPage = ({
     girlFormat,
     rules,
     formLink = "#",
+    fixtures = [],
 }: SportPageProps) => {
     return (
         <Layout>
@@ -147,10 +154,70 @@ const SportPage = ({
                 </div>
             </section>
 
+            {/* Fixtures Section */}
+            {fixtures.length > 0 && (
+                <section className="py-12 md:py-16">
+                    <div className="container mx-auto px-4">
+                        <div className="max-w-4xl mx-auto">
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5 }}
+                                className="flex items-center gap-3 mb-8 md:mb-10"
+                            >
+                                <div className="h-7 w-1 bg-primary rounded-full" />
+                                <h2 className="font-display text-2xl md:text-3xl font-bold">
+                                    Upcoming <span className="text-primary">Fixtures</span>
+                                </h2>
+                            </motion.div>
+
+                            <motion.div
+                                variants={containerVariants}
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true, margin: "-60px" }}
+                                className="grid grid-cols-1 md:grid-cols-2 gap-4"
+                            >
+                                {fixtures.map((fixture, i) => (
+                                    <motion.div
+                                        key={i}
+                                        variants={itemVariants}
+                                        className="glass-card overflow-hidden group hover:border-primary/40 transition-all duration-300"
+                                    >
+                                        <div className="bg-primary/5 px-4 py-2 border-b border-white/5 flex justify-between items-center">
+                                            <div className="flex items-center gap-2 text-xs font-medium text-primary uppercase tracking-wider">
+                                                <Calendar className="w-3.5 h-3.5" />
+                                                {fixture.day}
+                                            </div>
+                                            <div className="flex items-center gap-2 text-xs font-medium text-muted-foreground uppercase tracking-wider">
+                                                <Clock className="w-3.5 h-3.5" />
+                                                {fixture.time}
+                                            </div>
+                                        </div>
+                                        <div className="p-5">
+                                            <h3 className="text-xl font-display font-bold mb-4 text-center group-hover:text-primary transition-colors">
+                                                {fixture.match}
+                                            </h3>
+                                            <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground bg-white/5 py-2 rounded-lg">
+                                                <MapPin className="w-4 h-4 text-primary" />
+                                                {fixture.venue}
+                                            </div>
+                                        </div>
+                                    </motion.div>
+                                ))}
+                            </motion.div>
+                        </div>
+                    </div>
+                </section>
+            )}
+
             {/* Divider */}
-            <div className="container mx-auto px-4">
-                <div className="h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent max-w-3xl mx-auto" />
-            </div>
+            {fixtures.length > 0 && (
+                <div className="container mx-auto px-4">
+                    <div className="h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent max-w-4xl mx-auto" />
+                </div>
+            )}
 
             {/* Rules & Regulations */}
             <section className="py-12 md:py-16">
