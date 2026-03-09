@@ -1,14 +1,5 @@
 [
     {
-        "Team1": "PANDYA",
-        "Team2": "NIVEDITA",
-        "Date": "9th March",
-        "Time": "6:00 PM",
-        "Venue": "Lords Ground",
-        "isCompleted": false,
-        "Winner": ""
-    },
-    {
         "Team1": "META+MINING",
         "Team2": "IT",
         "Date": "9th March",
@@ -31,6 +22,15 @@
         "Team2": "MTECH",
         "Date": "9th March",
         "Time": "9:00 PM",
+        "Venue": "Lords Ground",
+        "isCompleted": false,
+        "Winner": ""
+    },
+    {
+        "Team1": "MECHANICAL",
+        "Team2": "MSC-PHD",
+        "Date": "9th March",
+        "Time": "11:00 PM",
         "Venue": "Lords Ground",
         "isCompleted": false,
         "Winner": ""
