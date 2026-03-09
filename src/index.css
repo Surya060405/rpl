@@ -315,4 +315,12 @@
       typewriter 2.5s steps(25, end) 0.5s 1 normal both,
       blink-caret 0.75s step-end 4 0.5s forwards;
   }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
