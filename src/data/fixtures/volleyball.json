@@ -1,0 +1,38 @@
+[
+    {
+        "Team1": "MECHANICAL",
+        "Team2": "CIVIL",
+        "Date": "9th March",
+        "Time": "6:00 PM",
+        "Venue": "Volleyball Court",
+        "isCompleted": false,
+        "Winner": ""
+    },
+    {
+        "Team1": "META+MINING",
+        "Team2": "MSC+PHD",
+        "Date": "9th March",
+        "Time": "6:30 PM",
+        "Venue": "Volleyball Court",
+        "isCompleted": false,
+        "Winner": ""
+    },
+    {
+        "Team1": "Lt. Williams",
+        "Team2": "Pandya Hall",
+        "Date": "9th March",
+        "Time": "7:00 PM",
+        "Venue": "Volleyball Court",
+        "isCompleted": false,
+        "Winner": ""
+    },
+    {
+        "Team1": "CST",
+        "Team2": "CIVIL",
+        "Date": "9th March",
+        "Time": "7:30 PM",
+        "Venue": "Volleyball Court",
+        "isCompleted": false,
+        "Winner": ""
+    }
+]

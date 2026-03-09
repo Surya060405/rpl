@@ -1,5 +1,6 @@
 import { Volleyball } from "lucide-react";
-import SportPage from "@/components/SportPage";
+import SportPage, { Pool } from "@/components/SportPage";
+import matchesData from "@/data/fixtures/volleyball.json";
 
 const rules = [
     "Each team must consist of 6 players and up to 2 substitutes. All players must be registered before the tournament begins.",
@@ -12,6 +13,38 @@ const rules = [
     "Unsportsmanlike behaviour, abusive language, or physical altercations will lead to immediate disqualification.",
 ];
 
+const pools: Pool[] = [
+    {
+        name: "Pool A",
+        gender: "Boys",
+        teams: [
+            { name: "META+MINING", played: 0, won: 0, lost: 0, points: 0 },
+            { name: "MSC+PHD", played: 0, won: 0, lost: 0, points: 0 },
+            { name: "AERO+ARCHI", played: 0, won: 0, lost: 0, points: 0 },
+            { name: "ELECTRICAL+ETC", played: 0, won: 0, lost: 0, points: 0 },
+        ],
+    },
+    {
+        name: "Pool B",
+        gender: "Boys",
+        teams: [
+            { name: "CST", played: 0, won: 0, lost: 0, points: 0 },
+            { name: "IT", played: 0, won: 0, lost: 0, points: 0 },
+            { name: "MECHANICAL", played: 0, won: 0, lost: 0, points: 0 },
+            { name: "CIVIL", played: 0, won: 0, lost: 0, points: 0 },
+        ],
+    },
+    {
+        name: "Girls Pool",
+        gender: "Girls",
+        teams: [
+            { name: "Sister Nivedita", played: 0, won: 0, lost: 0, points: 0 },
+            { name: "Lt. Williams", played: 0, won: 0, lost: 0, points: 0 },
+            { name: "Pandya Hall", played: 0, won: 0, lost: 0, points: 0 },
+        ],
+    },
+];
+
 const VolleyballPage = () => (
     <SportPage
         name="Volleyball"
@@ -22,6 +55,8 @@ const VolleyballPage = () => (
         boyFormat="Inter-Departmental"
         girlFormat="Inter-Hostel"
         rules={rules}
+        pools={pools}
+        matches={matchesData}
         formLink="https://docs.google.com/forms/d/e/1FAIpQLSebrW3r17mW-58HW1YZ9lmik0Hg3smDhI3zT4iNx39E-imvQg/viewform?usp=publish-editor"
     />
 );

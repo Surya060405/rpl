@@ -1,0 +1,20 @@
+[
+    {
+        "Team1": "IT",
+        "Team2": "MTECH",
+        "Date": "9th March",
+        "Time": "6:00 PM",
+        "Venue": "Netaji Bhavan",
+        "isCompleted": false,
+        "Winner": ""
+    },
+    {
+        "Team1": "ETC",
+        "Team2": "AERO-ARCHI",
+        "Date": "9th March",
+        "Time": "6:30 PM",
+        "Venue": "Netaji Bhavan",
+        "isCompleted": false,
+        "Winner": ""
+    }
+]

@@ -1,0 +1,83 @@
+[
+    {
+        "Team1": "IT",
+        "Team2": "MECHANICAL",
+        "Time": "7:00 PM",
+        "Venue": "Richardson Hall",
+        "Date": "9th March",
+        "isCompleted": false,
+        "Winner": ""
+    },
+    {
+        "Team1": "MTECH",
+        "Team2": "CST",
+        "Time": "7:30 PM",
+        "Venue": "Richardson Hall",
+        "Date": "9th March",
+        "isCompleted": false,
+        "Winner": ""
+    },
+    {
+        "Team1": "CIVIL",
+        "Team2": "AERO+ARCHI",
+        "Time": "8:00 PM",
+        "Venue": "Richardson Hall",
+        "Date": "9th March",
+        "isCompleted": false,
+        "Winner": ""
+    },
+    {
+        "Team1": "ELECTRICAL",
+        "Team2": "CST",
+        "Time": "8:30 PM",
+        "Venue": "Richardson Hall",
+        "Date": "9th March",
+        "isCompleted": false,
+        "Winner": ""
+    },
+    {
+        "Team1": "ETC",
+        "Team2": "MECHANICAL",
+        "Time": "9:00 PM",
+        "Venue": "Richardson Hall",
+        "Date": "9th March",
+        "isCompleted": false,
+        "Winner": ""
+    },
+    {
+        "Team1": "PHD+MSC",
+        "Team2": "META+MINING",
+        "Time": "9:30 PM",
+        "Venue": "Richardson Hall",
+        "Date": "9th March",
+        "isCompleted": false,
+        "Winner": ""
+    },
+    {
+        "Team1": "AERO+ARCHI",
+        "Team2": "ELECTRICAL",
+        "Time": "10:00 PM",
+        "Venue": "Richardson Hall",
+        "Date": "9th March",
+        "isCompleted": false,
+        "Winner": ""
+    },
+    {
+        "Team1": "CIVIL",
+        "Team2": "MTECH",
+        "Time": "10:30 PM",
+        "Venue": "Richardson Hall",
+        "Date": "9th March",
+        "isCompleted": false,
+        "Winner": ""
+    },
+    {
+        "Team1": "IT",
+        "Team2": "META+MINING",
+        "Time": "11:00 PM",
+        "Venue": "Richardson Hall",
+        "Date": "9th March",
+        "isCompleted": false,
+        "Winner": ""
+    }
+]

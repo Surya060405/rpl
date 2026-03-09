@@ -39,20 +39,7 @@ const rules = [
     "Unsportsmanlike behaviour, abusive language, or physical altercations will lead to immediate disqualification.",
 ];
 
-const fixtures = [
-    {
-        day: "Day 1 (9th March)",
-        match: "IT vs MTECH",
-        time: "6:00 PM",
-        venue: "Netaji Bhavan",
-    },
-    {
-        day: "Day 1 (9th March)",
-        match: "ETC vs AERO-ARCHI",
-        time: "6:30 PM",
-        venue: "Netaji Bhavan",
-    },
-];
+import matchesData from "@/data/fixtures/badminton.json";
 
 const BadmintonPage = () => (
     <SportPage
@@ -64,7 +51,7 @@ const BadmintonPage = () => (
         boyFormat="Inter-Departmental (Mixed)"
         girlFormat="Inter-Departmental (Mixed)"
         rules={rules}
-        fixtures={fixtures}
+        matches={matchesData}
         formLink="https://forms.gle/pkFTftw9G863Cyuh7"
     />
 );

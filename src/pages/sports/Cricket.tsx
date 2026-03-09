@@ -1,5 +1,6 @@
 import { MdSportsCricket } from "react-icons/md";
-import SportPage from "@/components/SportPage";
+import SportPage, { Pool } from "@/components/SportPage";
+import matchesData from "@/data/fixtures/cricket.json";
 
 const rules = [
     "RPL Inter-Departmental Cricket Jersey is mandatory to participate. No Jersey means No Participation.",
@@ -13,6 +14,40 @@ const rules = [
     "Matches will follow standard BCCI/ICC rules unless modified by the tournament committee. Any rule modifications will be communicated before the start.",
 ];
 
+const pools: Pool[] = [
+    {
+        name: "Pool A",
+        gender: "Boys",
+        teams: [
+            { name: "CST", played: 0, won: 0, lost: 0, nrr: 0, points: 0 },
+            { name: "MECHANICAL", played: 0, won: 0, lost: 0, nrr: 0, points: 0 },
+            { name: "AERO+ARCHI", played: 0, won: 0, lost: 0, nrr: 0, points: 0 },
+            { name: "PHD+MSC", played: 0, won: 0, lost: 0, nrr: 0, points: 0 },
+            { name: "ELECTRICAL", played: 0, won: 0, lost: 0, nrr: 0, points: 0 },
+        ],
+    },
+    {
+        name: "Pool B",
+        gender: "Boys",
+        teams: [
+            { name: "META+MINING", played: 0, won: 0, lost: 0, nrr: 0, points: 0 },
+            { name: "IT", played: 0, won: 0, lost: 0, nrr: 0, points: 0 },
+            { name: "CIVIL", played: 0, won: 0, lost: 0, nrr: 0, points: 0 },
+            { name: "MTECH", played: 0, won: 0, lost: 0, nrr: 0, points: 0 },
+            { name: "ETC", played: 0, won: 0, lost: 0, nrr: 0, points: 0 },
+        ],
+    },
+    {
+        name: "Girls Pool",
+        gender: "Girls",
+        teams: [
+            { name: "Pandya Hall", played: 0, won: 0, lost: 0, points: 0 },
+            { name: "Lt. Williams", played: 0, won: 0, lost: 0, points: 0 },
+            { name: "Sister Nivedita", played: 0, won: 0, lost: 0, points: 0 },
+        ],
+    },
+];
+
 const Cricket = () => (
     <SportPage
         name="Cricket"
@@ -23,6 +58,8 @@ const Cricket = () => (
         boyFormat="Inter-Departmental"
         girlFormat="Inter-Hostel"
         rules={rules}
+        pools={pools}
+        matches={matchesData}
         formLink="https://forms.gle/s2zR3bBXy9Azb4jc9"
     />
 );

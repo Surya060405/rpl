@@ -1,0 +1,38 @@
+[
+    {
+        "Team1": "PANDYA",
+        "Team2": "NIVEDITA",
+        "Date": "9th March",
+        "Time": "6:00 PM",
+        "Venue": "Lords Ground",
+        "isCompleted": false,
+        "Winner": ""
+    },
+    {
+        "Team1": "META+MINING",
+        "Team2": "IT",
+        "Date": "9th March",
+        "Time": "7:00 PM",
+        "Venue": "Lords Ground",
+        "isCompleted": false,
+        "Winner": ""
+    },
+    {
+        "Team1": "CST",
+        "Team2": "AERO+ARCHI",
+        "Date": "9th March",
+        "Time": "8:00 PM",
+        "Venue": "Lords Ground",
+        "isCompleted": false,
+        "Winner": ""
+    },
+    {
+        "Team1": "CIVIL",
+        "Team2": "MTECH",
+        "Date": "9th March",
+        "Time": "9:00 PM",
+        "Venue": "Lords Ground",
+        "isCompleted": false,
+        "Winner": ""
+    }
+]
