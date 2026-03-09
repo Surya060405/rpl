@@ -153,18 +153,18 @@ const SportPage = ({
             </div>
 
             {/* Rules & Regulations */}
-            <section className="py-16">
+            <section className="py-12 md:py-16">
                 <div className="container mx-auto px-4">
-                    <div className="max-w-3xl mx-auto">
+                    <div className="max-w-4xl mx-auto">
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5 }}
-                            className="flex items-center gap-3 mb-10"
+                            className="flex items-center gap-3 mb-8 md:mb-10"
                         >
-                            <div className="h-8 w-1 bg-primary rounded-full" />
-                            <h2 className="font-display text-3xl md:text-4xl font-bold">
+                            <div className="h-7 w-1 bg-primary rounded-full" />
+                            <h2 className="font-display text-2xl md:text-3xl font-bold">
                                 Rules &amp; <span className="text-primary">Regulations</span>
                             </h2>
                         </motion.div>
@@ -174,15 +174,15 @@ const SportPage = ({
                             initial="hidden"
                             whileInView="visible"
                             viewport={{ once: true, margin: "-60px" }}
-                            className="space-y-4"
+                            className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4"
                         >
                             {rules.map((rule, i) => (
                                 <motion.li key={i} variants={itemVariants}>
-                                    <div className="glass-card p-4 rounded-xl flex items-start gap-4 group hover:border-primary/40 transition-colors duration-300">
+                                    <div className="glass-card p-3.5 rounded-xl flex items-start gap-3 group hover:border-primary/40 transition-colors duration-300 h-full">
                                         <span className="flex-shrink-0 mt-0.5">
-                                            <CheckCircle2 className="w-5 h-5 text-primary" />
+                                            <CheckCircle2 className="w-4 h-4 text-primary" />
                                         </span>
-                                        <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                                        <p className="text-sm text-muted-foreground leading-relaxed">
                                             {rule}
                                         </p>
                                     </div>
@@ -193,55 +193,6 @@ const SportPage = ({
                 </div>
             </section>
 
-            {/* Divider */}
-            <div className="container mx-auto px-4">
-                <div className="h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent max-w-3xl mx-auto" />
-            </div>
-
-            {/* Register Now CTA */}
-            <section className="py-20 pb-32">
-                <div className="container mx-auto px-4">
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
-                        className="max-w-2xl mx-auto text-center"
-                    >
-                        <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
-                            Ready to <span className="text-primary">Compete?</span>
-                        </h2>
-                        <p className="text-muted-foreground mb-8 text-base md:text-lg">
-                            Secure your spot in the tournament. Register your team now before
-                            slots fill up.
-                        </p>
-
-                        <motion.a
-                            href={formLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.97 }}
-                            className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground font-display font-semibold text-base tracking-wider rounded-xl glow-button transition-all duration-300 shadow-lg shadow-primary/30"
-                        >
-                            Register Now
-                            <ExternalLink className="w-5 h-5" />
-                        </motion.a>
-
-                        {formLink === "#" && (
-                            <motion.div
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                transition={{ delay: 0.4 }}
-                                className="mt-6 flex items-center justify-center gap-2 text-xs text-muted-foreground/60"
-                            >
-                                <Info className="w-3.5 h-3.5" />
-                                <span>Registration link coming soon</span>
-                            </motion.div>
-                        )}
-                    </motion.div>
-                </div>
-            </section>
         </Layout>
     );
 };

@@ -230,16 +230,19 @@ const Events = () => {
                       </div>
                     </div>
 
-                    {/* Register CTA */}
+                    {/* Play CTA */}
                     <div className="mt-5">
-                      <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground text-xs font-semibold tracking-wider rounded-lg group-hover:bg-primary/90 transition-colors duration-300">
-                        Register
-                        <svg className="w-3 h-3 group-hover:translate-x-0.5 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                      <span className="inline-flex items-center gap-2 px-6 py-2 bg-primary text-primary-foreground text-xs font-semibold tracking-wider rounded-lg group-hover:bg-primary/90 transition-all duration-300 shadow-lg shadow-primary/20">
+                        Play
+                        <svg className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform duration-200" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
                       </span>
                     </div>
                   </div>
                 </Link>
               </motion.div>
+
+
+
             ))}
           </motion.div>
         </div>

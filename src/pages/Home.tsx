@@ -163,14 +163,14 @@ const Home = ({ isLoading = false }: { isLoading?: boolean }) => {
       <AboutSection />
 
       {/* General Rules Section */}
-      <section className="py-20 md:py-32">
+      <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="font-display text-3xl md:text-5xl font-bold text-center mb-16"
+            className="font-display text-3xl md:text-4xl font-bold text-center mb-12"
           >
             General <span className="text-primary">Rules</span>
           </motion.h2>
@@ -180,24 +180,29 @@ const Home = ({ isLoading = false }: { isLoading?: boolean }) => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
           >
             {rules.map((rule, index) => (
               <motion.div
                 key={rule.title}
                 variants={itemVariants}
-                className="glass-card p-6 border-accent-left card-hover"
+                className="glass-card p-5 border-accent-left card-hover flex items-start gap-4 transition-all duration-300"
               >
-                <rule.icon className="w-10 h-10 text-primary mb-4" />
-                <h3 className="font-display text-lg font-semibold mb-2">{rule.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  {rule.description}
-                </p>
+                <div className="flex-shrink-0 p-2 rounded-lg bg-primary/10">
+                  <rule.icon className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-display text-base font-semibold mb-1">{rule.title}</h3>
+                  <p className="text-muted-foreground text-xs leading-relaxed">
+                    {rule.description}
+                  </p>
+                </div>
               </motion.div>
             ))}
           </motion.div>
         </div>
       </section>
+
 
       {/* Contact Section */}
       <section id="contact" className="py-20 md:py-32 bg-black/20">
