@@ -5,8 +5,8 @@
         "Date": "9th March",
         "Time": "7:00 PM",
         "Venue": "Lords Ground",
-        "isCompleted": false,
-        "Winner": ""
+        "isCompleted": true,
+        "Winner": "META+MINING"
     },
     {
         "Team1": "CST",
@@ -14,8 +14,8 @@
         "Date": "9th March",
         "Time": "8:00 PM",
         "Venue": "Lords Ground",
-        "isCompleted": false,
-        "Winner": ""
+        "isCompleted": true,
+        "Winner": "AERO+ARCHI"
     },
     {
         "Team1": "CIVIL",
@@ -23,14 +23,131 @@
         "Date": "9th March",
         "Time": "9:00 PM",
         "Venue": "Lords Ground",
+        "isCompleted": true,
+        "Winner": "CIVIL"
+    },
+    {
+        "Team1": "MECHANICAL",
+        "Team2": "MSC+PHD",
+        "Date": "9th March",
+        "Time": "11:00 PM",
+        "Venue": "Lords Ground",
+        "isCompleted": true,
+        "Winner": "MSC+PHD"
+    },
+    {
+        "Team1": "CIVIL",
+        "Team2": "META+MINING",
+        "Date": "Yesterday",
+        "Time": "6:00 PM",
+        "Venue": "Lords Ground",
+        "isCompleted": true,
+        "Winner": "CIVIL"
+    },
+    {
+        "Team1": "ELECTRICAL",
+        "Team2": "AERO+ARCHI",
+        "Date": "10th March",
+        "Time": "6:00 PM",
+        "Venue": "Lords Ground",
+        "isCompleted": false,
+        "Winner": ""
+    },
+    {
+        "Team1": "ETC",
+        "Team2": "MTECH",
+        "Date": "10th March",
+        "Time": "7:00 PM",
+        "Venue": "Lords Ground",
+        "isCompleted": false,
+        "Winner": ""
+    },
+    {
+        "Team1": "CST",
+        "Team2": "MECHANICAL",
+        "Date": "10th March",
+        "Time": "8:00 PM",
+        "Venue": "Lords Ground",
+        "isCompleted": false,
+        "Winner": ""
+    },
+    {
+        "Team1": "ELECTRICAL",
+        "Team2": "MSC+PHD",
+        "Date": "10th March",
+        "Time": "9:00 PM",
+        "Venue": "Lords Ground",
+        "isCompleted": false,
+        "Winner": ""
+    },
+    {
+        "Team1": "ETC",
+        "Team2": "IT",
+        "Date": "10th March",
+        "Time": "10:00 PM",
+        "Venue": "Lords Ground",
+        "isCompleted": false,
+        "Winner": ""
+    },
+    {
+        "Team1": "CST",
+        "Team2": "ELECTRICAL",
+        "Date": "10th March",
+        "Time": "11:00 PM",
+        "Venue": "Lords Ground",
         "isCompleted": false,
         "Winner": ""
     },
     {
         "Team1": "MECHANICAL",
-        "Team2": "MSC-PHD",
-        "Date": "9th March",
-        "Time": "11:00 PM",
+        "Team2": "AERO+ARCHI",
+        "Date": "11th March",
+        "Time": "12:00 AM",
+        "Venue": "Lords Ground",
+        "isCompleted": false,
+        "Winner": ""
+    },
+    {
+        "Team1": "META+MINING",
+        "Team2": "ETC",
+        "Date": "11th March",
+        "Time": "1:00 AM",
+        "Venue": "Lords Ground",
+        "isCompleted": false,
+        "Winner": ""
+    },
+    {
+        "Team1": "CIVIL",
+        "Team2": "IT",
+        "Date": "11th March",
+        "Time": "2:00 AM",
+        "Venue": "Lords Ground",
+        "isCompleted": false,
+        "Winner": ""
+    },
+    {
+        "Team1": "CST",
+        "Team2": "MSC+PHD",
+        "Date": "11th March",
+        "Time": "3:00 AM",
+        "Venue": "Lords Ground",
+        "isCompleted": false,
+        "Winner": ""
+    },
+    {
+        "Team1": "META+MINING",
+        "Team2": "MTECH",
+        "Date": "11th March",
+        "Time": "4:00 AM",
+        "Venue": "Lords Ground",
+        "isCompleted": false,
+        "Winner": ""
+    },
+    {
+        "Team1": "MECHANICAL",
+        "Team2": "ELECTRICAL",
+        "Date": "11th March",
+        "Time": "5:00 AM",
         "Venue": "Lords Ground",
         "isCompleted": false,
         "Winner": ""

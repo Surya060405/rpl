@@ -18,20 +18,20 @@ const pools: Pool[] = [
         name: "Pool A",
         gender: "Boys",
         teams: [
-            { name: "META+MINING", played: 0, won: 0, lost: 0, pd: 0, points: 0 },
-            { name: "MSC+PHD", played: 0, won: 0, lost: 0, pd: 0, points: 0 },
+            { name: "MSC+PHD", played: 1, won: 1, lost: 0, pd: 12, points: 2 },
             { name: "AERO+ARCHI", played: 0, won: 0, lost: 0, pd: 0, points: 0 },
             { name: "ELECTRICAL+ETC", played: 0, won: 0, lost: 0, pd: 0, points: 0 },
+            { name: "META+MINING", played: 1, won: 0, lost: 1, pd: -12, points: 0 },
         ],
     },
     {
         name: "Pool B",
         gender: "Boys",
         teams: [
-            { name: "CST", played: 0, won: 0, lost: 0, pd: 0, points: 0 },
+            { name: "CST", played: 1, won: 1, lost: 0, pd: 13, points: 2 },
+            { name: "MECHANICAL", played: 1, won: 1, lost: 0, pd: 8, points: 2 },
             { name: "IT", played: 0, won: 0, lost: 0, pd: 0, points: 0 },
-            { name: "MECHANICAL", played: 0, won: 0, lost: 0, pd: 0, points: 0 },
-            { name: "CIVIL", played: 0, won: 0, lost: 0, pd: 0, points: 0 },
+            { name: "CIVIL", played: 2, won: 0, lost: 2, pd: -21, points: 0 },
         ],
     },
     {

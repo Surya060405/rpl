@@ -30,7 +30,7 @@ const BadmintonIcon = ({ className }: { className?: string }) => (
 
 const rules = [
     "Badminton will be conducted Inter-Departmental and will be Mixed (Boys + Girls).",
-    "Each department will field a team of 5 members: 3 Boys and 2 Girls. This composition is mandatory.",
+    "Each department will field a team of 6 members: 3 Boys and 3 Girls. This composition is mandatory.",
     "A valid College ID card is mandatory for every player. No ID means no participation.",
     "Players can only represent ONE department throughout the tournament. Cross-representation is strictly prohibited.",
     "Standard BWF (Badminton World Federation) rules apply unless modified by the tournament committee. Any modifications will be communicated in advance.",
@@ -46,7 +46,7 @@ const BadmintonPage = () => (
         name="Badminton"
         icon={BadmintonIcon}
         category="indoor"
-        players="5 per team (3 Boys + 2 Girls)"
+        players="6 per team (3 Boys + 3 Girls)"
         tagline="Swift smashes and delicate drops — Mixed Inter-Departmental."
         boyFormat="Inter-Departmental (Mixed)"
         girlFormat="Inter-Departmental (Mixed)"

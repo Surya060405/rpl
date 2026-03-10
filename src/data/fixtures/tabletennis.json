@@ -5,8 +5,8 @@
         "Time": "7:00 PM",
         "Venue": "Richardson Hall",
         "Date": "9th March",
-        "isCompleted": false,
-        "Winner": ""
+        "isCompleted": true,
+        "Winner": "IT"
     },
     {
         "Team1": "MTECH",
@@ -14,8 +14,8 @@
         "Time": "7:30 PM",
         "Venue": "Richardson Hall",
         "Date": "9th March",
-        "isCompleted": false,
-        "Winner": ""
+        "isCompleted": true,
+        "Winner": "CST"
     },
     {
         "Team1": "CIVIL",
@@ -23,8 +23,8 @@
         "Time": "8:00 PM",
         "Venue": "Richardson Hall",
         "Date": "9th March",
-        "isCompleted": false,
-        "Winner": ""
+        "isCompleted": true,
+        "Winner": "AERO+ARCHI"
     },
     {
         "Team1": "ELECTRICAL",
@@ -32,8 +32,8 @@
         "Time": "8:30 PM",
         "Venue": "Richardson Hall",
         "Date": "9th March",
-        "isCompleted": false,
-        "Winner": ""
+        "isCompleted": true,
+        "Winner": "CST"
     },
     {
         "Team1": "ETC",
@@ -41,17 +41,17 @@
         "Time": "9:00 PM",
         "Venue": "Richardson Hall",
         "Date": "9th March",
-        "isCompleted": false,
-        "Winner": ""
+        "isCompleted": true,
+        "Winner": "MECHANICAL"
     },
     {
-        "Team1": "PHD+MSC",
+        "Team1": "MSC+PHD",
         "Team2": "META+MINING",
         "Time": "9:30 PM",
         "Venue": "Richardson Hall",
         "Date": "9th March",
-        "isCompleted": false,
-        "Winner": ""
+        "isCompleted": true,
+        "Winner": "MSC+PHD"
     },
     {
         "Team1": "AERO+ARCHI",
@@ -59,8 +59,8 @@
         "Time": "10:00 PM",
         "Venue": "Richardson Hall",
         "Date": "9th March",
-        "isCompleted": false,
-        "Winner": ""
+        "isCompleted": true,
+        "Winner": "ELECTRICAL"
     },
     {
         "Team1": "CIVIL",
@@ -68,8 +68,8 @@
         "Time": "10:30 PM",
         "Venue": "Richardson Hall",
         "Date": "9th March",
-        "isCompleted": false,
-        "Winner": ""
+        "isCompleted": true,
+        "Winner": "CIVIL"
     },
     {
         "Team1": "IT",

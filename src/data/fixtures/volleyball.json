@@ -5,8 +5,8 @@
         "Date": "9th March",
         "Time": "6:00 PM",
         "Venue": "Volleyball Court",
-        "isCompleted": false,
-        "Winner": ""
+        "isCompleted": true,
+        "Winner": "MECHANICAL"
     },
     {
         "Team1": "META+MINING",
@@ -14,17 +14,8 @@
         "Date": "9th March",
         "Time": "6:30 PM",
         "Venue": "Volleyball Court",
-        "isCompleted": false,
-        "Winner": ""
-    },
-    {
-        "Team1": "Lt. Williams",
-        "Team2": "Pandya Hall",
-        "Date": "9th March",
-        "Time": "7:00 PM",
-        "Venue": "Volleyball Court",
-        "isCompleted": false,
-        "Winner": ""
+        "isCompleted": true,
+        "Winner": "MSC+PHD"
     },
     {
         "Team1": "CST",
@@ -32,7 +23,7 @@
         "Date": "9th March",
         "Time": "7:30 PM",
         "Venue": "Volleyball Court",
-        "isCompleted": false,
-        "Winner": ""
+        "isCompleted": true,
+        "Winner": "CST"
     }
 ]
