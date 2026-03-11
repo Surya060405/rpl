@@ -47,7 +47,7 @@ const BadmintonPage = () => (
         icon={BadmintonIcon}
         category="indoor"
         players="6 per team (3 Boys + 3 Girls)"
-        tagline="Swift smashes and delicate drops — Mixed Inter-Departmental."
+        tagline="Swift smashes and delicate drops — Mixed Inter-Departmental (3B + 3G)."
         boyFormat="Inter-Departmental (Mixed)"
         girlFormat="Inter-Departmental (Mixed)"
         rules={rules}

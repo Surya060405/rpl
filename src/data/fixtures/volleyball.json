@@ -25,5 +25,125 @@
         "Venue": "Volleyball Court",
         "isCompleted": true,
         "Winner": "CST"
+    },
+    {
+        "Team1": "ELECTRICAL+ETC",
+        "Team2": "AERO+ARCHI",
+        "Date": "10th March",
+        "Time": "5:00 PM",
+        "Venue": "Volleyball Court",
+        "isCompleted": true,
+        "Winner": "ELECTRICAL+ETC"
+    },
+    {
+        "Team1": "IT",
+        "Team2": "MECHANICAL",
+        "Date": "10th March",
+        "Time": "5:30 PM",
+        "Venue": "Volleyball Court",
+        "isCompleted": true,
+        "Winner": "MECHANICAL"
+    },
+    {
+        "Team1": "AERO+ARCHI",
+        "Team2": "META+MINING",
+        "Date": "10th March",
+        "Time": "6:00 PM",
+        "Venue": "Volleyball Court",
+        "isCompleted": true,
+        "Winner": "META+MINING"
+    },
+    {
+        "Team1": "IT",
+        "Team2": "CIVIL",
+        "Date": "10th March",
+        "Time": "6:30 PM",
+        "Venue": "Volleyball Court",
+        "isCompleted": true,
+        "Winner": "IT"
+    },
+    {
+        "Team1": "MSC+PHD",
+        "Team2": "ELECTRICAL+ETC",
+        "Date": "10th March",
+        "Time": "7:00 PM",
+        "Venue": "Volleyball Court",
+        "isCompleted": true,
+        "Winner": "MSC+PHD"
+    },
+    {
+        "Team1": "IT",
+        "Team2": "CST",
+        "Date": "10th March",
+        "Time": "7:30 PM",
+        "Venue": "Volleyball Court",
+        "isCompleted": true,
+        "Winner": "CST"
+    },
+    {
+        "Team1": "CST",
+        "Team2": "MECHANICAL",
+        "Date": "10th March",
+        "Time": "8:00 PM",
+        "Venue": "Volleyball Court",
+        "isCompleted": true,
+        "Winner": "CST"
+    },
+    {
+        "Team1": "AERO+ARCHI",
+        "Team2": "MSC+PHD",
+        "Date": "10th March",
+        "Time": "8:30 PM",
+        "Venue": "Volleyball Court",
+        "isCompleted": true,
+        "Winner": "MSC+PHD"
+    },
+    {
+        "Team1": "Lt. Williams",
+        "Team2": "Pandya Hall",
+        "Date": "10th March",
+        "Time": "9:00 PM",
+        "Venue": "Volleyball Court",
+        "isCompleted": true,
+        "Winner": "Lt. Williams"
+    },
+    {
+        "Team1": "META+MINING",
+        "Team2": "ELECTRICAL+ETC",
+        "Date": "11th March",
+        "Time": "7:00 PM",
+        "Venue": "Volleyball Court",
+        "isCompleted": false,
+        "Winner": ""
+    },
+    {
+        "Team1": "TBD",
+        "Team2": "TBD",
+        "Date": "TBD",
+        "Time": "TBD",
+        "Venue": "Volleyball Court",
+        "isCompleted": false,
+        "Winner": "",
+        "stage": "Semi-Final 1"
+    },
+    {
+        "Team1": "TBD",
+        "Team2": "TBD",
+        "Date": "TBD",
+        "Time": "TBD",
+        "Venue": "Volleyball Court",
+        "isCompleted": false,
+        "Winner": "",
+        "stage": "Semi-Final 2"
+    },
+    {
+        "Team1": "TBD",
+        "Team2": "TBD",
+        "Date": "TBD",
+        "Time": "TBD",
+        "Venue": "Volleyball Court",
+        "isCompleted": false,
+        "Winner": "",
+        "stage": "Final"
     }
 ]

@@ -90,8 +90,8 @@ const sports: Sport[] = [
     slug: "badminton",
     icon: BadmintonIcon,
     category: "indoor",
-    description: "Swift smashes and delicate drops. Mixed Inter-Departmental — 3 Boys + 2 Girls per team. Departments compete for supremacy with lightning-fast reflexes on the court.",
-    players: "5 per team (3M + 2F)",
+    description: "Swift smashes and delicate drops. Mixed Inter-Departmental — 3 Boys + 3 Girls per team. Departments compete for supremacy with lightning-fast reflexes on the court.",
+    players: "6 per team (3M + 3F)",
     venue: "Netaji Bhavan",
   },
 ];

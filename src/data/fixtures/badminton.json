@@ -23,8 +23,8 @@
         "Date": "10th March",
         "Time": "6:00 PM",
         "Venue": "Netaji Bhavan",
-        "isCompleted": false,
-        "Winner": ""
+        "isCompleted": true,
+        "Winner": "MTECH"
     },
     {
         "Team1": "IT",
@@ -32,17 +32,17 @@
         "Date": "10th March",
         "Time": "6:30 PM",
         "Venue": "Netaji Bhavan",
-        "isCompleted": false,
-        "Winner": ""
+        "isCompleted": true,
+        "Winner": "IT"
     },
     {
         "Team1": "CIVIL",
-        "Team2": "Winner of (AERO+ARCHI vs MTECH)",
+        "Team2": "MTECH",
         "Date": "10th March",
         "Time": "7:00 PM",
         "Venue": "Netaji Bhavan",
-        "isCompleted": false,
-        "Winner": ""
+        "isCompleted": true,
+        "Winner": "CIVIL"
     },
     {
         "Team1": "ETC",
@@ -50,8 +50,8 @@
         "Date": "10th March",
         "Time": "7:30 PM",
         "Venue": "Netaji Bhavan",
-        "isCompleted": false,
-        "Winner": ""
+        "isCompleted": true,
+        "Winner": "META+MINING"
     },
     {
         "Team1": "ELECTRICAL",
@@ -59,7 +59,37 @@
         "Date": "10th March",
         "Time": "8:00 PM",
         "Venue": "Netaji Bhavan",
+        "isCompleted": true,
+        "Winner": "ELECTRICAL"
+    },
+    {
+        "Team1": "ELECTRICAL",
+        "Team2": "META+MINING",
+        "Date": "11th March",
+        "Time": "5:00 PM",
+        "Venue": "Netaji Bhavan",
         "isCompleted": false,
-        "Winner": ""
+        "Winner": "",
+        "stage": "Semi-Final 1"
+    },
+    {
+        "Team1": "IT",
+        "Team2": "CIVIL",
+        "Date": "11th March",
+        "Time": "6:00 PM",
+        "Venue": "Netaji Bhavan",
+        "isCompleted": false,
+        "Winner": "",
+        "stage": "Semi-Final 2"
+    },
+    {
+        "Team1": "TBD",
+        "Team2": "TBD",
+        "Date": "TBD",
+        "Time": "TBD",
+        "Venue": "Netaji Bhavan",
+        "isCompleted": false,
+        "Winner": "",
+        "stage": "Final"
     }
 ]

@@ -72,13 +72,22 @@
         "Winner": "CIVIL"
     },
     {
+        "Team1": "Lt. Williams",
+        "Team2": "Pandya Hall",
+        "Time": "4:30 PM",
+        "Venue": "Richardson Hall",
+        "Date": "10th March",
+        "isCompleted": true,
+        "Winner": "Lt. Williams"
+    },
+    {
         "Team1": "IT",
         "Team2": "META+MINING",
         "Time": "5:00 PM",
         "Venue": "Richardson Hall",
         "Date": "10th March",
-        "isCompleted": false,
-        "Winner": ""
+        "isCompleted": true,
+        "Winner": "IT"
     },
     {
         "Team1": "MSC+PHD",
@@ -86,8 +95,8 @@
         "Time": "5:30 PM",
         "Venue": "Richardson Hall",
         "Date": "10th March",
-        "isCompleted": false,
-        "Winner": ""
+        "isCompleted": true,
+        "Winner": "MECHANICAL"
     },
     {
         "Team1": "AERO+ARCHI",
@@ -95,8 +104,8 @@
         "Time": "6:00 PM",
         "Venue": "Richardson Hall",
         "Date": "10th March",
-        "isCompleted": false,
-        "Winner": ""
+        "isCompleted": true,
+        "Winner": "AERO+ARCHI"
     },
     {
         "Team1": "IT",
@@ -104,8 +113,8 @@
         "Time": "6:30 PM",
         "Venue": "Richardson Hall",
         "Date": "10th March",
-        "isCompleted": false,
-        "Winner": ""
+        "isCompleted": true,
+        "Winner": "IT"
     },
     {
         "Team1": "ELECTRICAL",
@@ -113,8 +122,8 @@
         "Time": "7:00 PM",
         "Venue": "Richardson Hall",
         "Date": "10th March",
-        "isCompleted": false,
-        "Winner": ""
+        "isCompleted": true,
+        "Winner": "ELECTRICAL"
     },
     {
         "Team1": "IT",
@@ -122,8 +131,8 @@
         "Time": "7:30 PM",
         "Venue": "Richardson Hall",
         "Date": "10th March",
-        "isCompleted": false,
-        "Winner": ""
+        "isCompleted": true,
+        "Winner": "IT"
     },
     {
         "Team1": "AERO+ARCHI",
@@ -131,52 +140,100 @@
         "Time": "8:00 PM",
         "Venue": "Richardson Hall",
         "Date": "10th March",
-        "isCompleted": false,
-        "Winner": ""
+        "isCompleted": true,
+        "Winner": "CST"
     },
     {
-        "Team1": "CST",
-        "Team2": "CIVIL",
-        "Time": "8:30 PM",
+        "Team1": "MECHANICAL",
+        "Team2": "META+MINING",
+        "Time": "5:30 PM",
         "Venue": "Richardson Hall",
-        "Date": "10th March",
+        "Date": "11th March",
         "isCompleted": false,
         "Winner": ""
     },
     {
         "Team1": "ETC",
         "Team2": "META+MINING",
-        "Time": "9:00 PM",
+        "Time": "6:00 PM",
         "Venue": "Richardson Hall",
-        "Date": "10th March",
+        "Date": "11th March",
         "isCompleted": false,
         "Winner": ""
     },
     {
-        "Team1": "META+MINING",
-        "Team2": "MECHANICAL",
-        "Time": "9:30 PM",
+        "Team1": "CST",
+        "Team2": "CIVIL",
+        "Time": "6:30 PM",
         "Venue": "Richardson Hall",
-        "Date": "10th March",
+        "Date": "11th March",
         "isCompleted": false,
         "Winner": ""
     },
     {
         "Team1": "ELECTRICAL",
         "Team2": "MTECH",
-        "Time": "10:00 PM",
+        "Time": "7:00 PM",
         "Venue": "Richardson Hall",
-        "Date": "10th March",
+        "Date": "11th March",
+        "isCompleted": false,
+        "Winner": ""
+    },
+    {
+        "Team1": "Pandya",
+        "Team2": "Nivedita",
+        "Time": "7:30 PM",
+        "Venue": "Richardson Hall",
+        "Date": "11th March",
+        "isCompleted": false,
+        "Winner": ""
+    },
+    {
+        "Team1": "Nivedita",
+        "Team2": "Lt. Williams",
+        "Time": "8:00 PM",
+        "Venue": "Richardson Hall",
+        "Date": "11th March",
         "isCompleted": false,
         "Winner": ""
     },
     {
         "Team1": "ETC",
         "Team2": "MSC+PHD",
-        "Time": "10:30 PM",
+        "Time": "8:30 PM",
         "Venue": "Richardson Hall",
-        "Date": "10th March",
+        "Date": "11th March",
         "isCompleted": false,
         "Winner": ""
+    },
+    {
+        "Team1": "TBD",
+        "Team2": "TBD",
+        "Date": "TBD",
+        "Time": "TBD",
+        "Venue": "Richardson Hall",
+        "isCompleted": false,
+        "Winner": "",
+        "stage": "Semi-Final 1"
+    },
+    {
+        "Team1": "TBD",
+        "Team2": "TBD",
+        "Date": "TBD",
+        "Time": "TBD",
+        "Venue": "Richardson Hall",
+        "isCompleted": false,
+        "Winner": "",
+        "stage": "Semi-Final 2"
+    },
+    {
+        "Team1": "TBD",
+        "Team2": "TBD",
+        "Date": "TBD",
+        "Time": "TBD",
+        "Venue": "Richardson Hall",
+        "isCompleted": false,
+        "Winner": "",
+        "stage": "Final"
     }
 ]

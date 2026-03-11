@@ -15,6 +15,7 @@ export interface Match {
     Venue: string;
     isCompleted: boolean;
     Winner: string;
+    stage?: string;
 }
 
 export interface PoolTeam {
@@ -26,6 +27,7 @@ export interface PoolTeam {
     nrr?: number;
     rd?: number;
     pd?: number;
+    qualified?: boolean;
 }
 
 export interface Pool {
@@ -85,6 +87,9 @@ const SportPage = ({
 }: SportPageProps) => {
     const upcomingMatches = matches.filter(m => !m.isCompleted);
     const pastMatches = matches.filter(m => m.isCompleted);
+
+    const upcomingGroupMatches = upcomingMatches.filter(m => !m.stage || (!m.stage.toLowerCase().includes("semi") && !m.stage.toLowerCase().includes("final")));
+    const upcomingKnockouts = upcomingMatches.filter(m => m.stage && (m.stage.toLowerCase().includes("semi") || m.stage.toLowerCase().includes("final")));
 
     const hasGenderPools = pools.some(p => p.gender);
     const [activePoolTab, setActivePoolTab] = useState<"Boys" | "Girls">("Boys");
@@ -284,6 +289,7 @@ const SportPage = ({
                                                         const nrr = isObj ? teamObj.nrr : undefined;
                                                         const rd = isObj ? teamObj.rd : undefined;
                                                         const pd = isObj ? teamObj.pd : undefined;
+                                                        const qualified = isObj ? teamObj.qualified : false;
 
                                                         const teams = pool.teams as PoolTeam[];
                                                         const hasNrr = teams.some(item => typeof item === "object" && (item as PoolTeam).nrr !== undefined);
@@ -292,8 +298,13 @@ const SportPage = ({
 
                                                         return (
                                                             <tr key={idx} className="border-b border-white/5 last:border-0 hover:bg-white/5 transition-colors">
-                                                                <td className="px-4 py-4 font-medium text-white/90 whitespace-nowrap">
+                                                                <td className="px-4 py-4 font-medium text-white/90 whitespace-nowrap flex items-center gap-2">
                                                                     {teamName as string}
+                                                                    {qualified && (
+                                                                        <span className="text-[10px] font-bold bg-[#8806CE]/20 text-[#8806CE] px-1.5 py-0.5 rounded border border-[#8806CE]/30">
+                                                                            Q
+                                                                        </span>
+                                                                    )}
                                                                 </td>
                                                                 {isObj && (
                                                                     <>
@@ -361,7 +372,7 @@ const SportPage = ({
                                         viewport={{ once: true, margin: "-60px" }}
                                         className="grid grid-cols-1 md:grid-cols-2 gap-4"
                                     >
-                                        {upcomingMatches.map((match, i) => (
+                                        {upcomingGroupMatches.map((match, i) => (
                                             <motion.div
                                                 key={i}
                                                 variants={itemVariants}
@@ -378,6 +389,11 @@ const SportPage = ({
                                                     </div>
                                                 </div>
                                                 <div className="p-6 flex flex-col items-center">
+                                                    {match.stage && (
+                                                        <div className="text-[10px] uppercase tracking-[0.2em] text-white/50 mb-2 font-bold bg-white/5 px-3 py-1 rounded-full">
+                                                            {match.stage}
+                                                        </div>
+                                                    )}
                                                     <h3 className="text-xl md:text-2xl font-display font-bold mb-6 text-center text-white flex items-center justify-center gap-3 w-full">
                                                         <span className="flex-1 text-right">{match.Team1}</span>
                                                         <span className="text-sm text-white/40 font-medium italic lowercase">vs</span>
@@ -391,6 +407,66 @@ const SportPage = ({
                                             </motion.div>
                                         ))}
                                     </motion.div>
+
+                                    {upcomingKnockouts.length > 0 && (
+                                        <div className="mt-12">
+                                            <div className="flex items-center gap-4 mb-8">
+                                                <div className="h-px bg-white/10 flex-1" />
+                                                <h3 className="font-display text-xl md:text-2xl font-bold text-center text-primary uppercase tracking-widest flex items-center gap-3">
+                                                    <Trophy className="w-5 h-5" />
+                                                    Knockout Stage
+                                                    <Trophy className="w-5 h-5" />
+                                                </h3>
+                                                <div className="h-px bg-white/10 flex-1" />
+                                            </div>
+                                            <motion.div
+                                                variants={containerVariants}
+                                                initial="hidden"
+                                                whileInView="visible"
+                                                viewport={{ once: true, margin: "-60px" }}
+                                                className="grid grid-cols-1 md:grid-cols-2 gap-4"
+                                            >
+                                                {upcomingKnockouts.map((match, i) => {
+                                                    const isFinal = match.stage && match.stage.toLowerCase() === "final";
+                                                    return (
+                                                        <motion.div
+                                                            key={`knockout-${i}`}
+                                                            variants={itemVariants}
+                                                            className={`glass-card overflow-hidden group hover:border-[#8806CE]/40 relative transition-all duration-300 ${isFinal ? "md:col-span-2 lg:mx-16" : ""}`}
+                                                        >
+                                                            <div className="absolute inset-0 bg-gradient-to-br from-[#8806CE]/5 to-transparent pointer-events-none" />
+                                                            <div className="bg-[#8806CE]/10 px-4 py-2 border-b border-[#8806CE]/10 flex justify-between items-center">
+                                                                <div className="flex items-center gap-2 text-[10px] font-bold text-[#8806CE] uppercase tracking-widest">
+                                                                    <Calendar className="w-3.5 h-3.5" />
+                                                                    {match.Date}
+                                                                </div>
+                                                                <div className="flex items-center gap-2 text-[10px] font-bold text-[#8806CE] uppercase tracking-widest">
+                                                                    <Clock className="w-3.5 h-3.5" />
+                                                                    {match.Time}
+                                                                </div>
+                                                            </div>
+                                                            <div className={`p-6 flex flex-col items-center relative z-10 ${isFinal ? "py-10" : ""}`}>
+                                                                {match.stage && (
+                                                                    <div className={`uppercase tracking-[0.25em] text-[#8806CE] mb-3 font-bold bg-[#8806CE]/10 border border-[#8806CE]/20 rounded-full shadow-[0_0_10px_rgba(136,6,206,0.1)] ${isFinal ? "text-sm md:text-base px-6 py-2" : "text-[11px] px-4 py-1.5"}`}>
+                                                                        {match.stage}
+                                                                    </div>
+                                                                )}
+                                                                <h3 className={`font-display font-bold mb-6 text-center text-white flex items-center justify-center gap-3 w-full ${isFinal ? "text-2xl md:text-3xl lg:text-4xl" : "text-xl md:text-2xl"}`}>
+                                                                    <span className="flex-1 text-right">{match.Team1}</span>
+                                                                    <span className="text-sm text-[#8806CE]/60 font-medium italic lowercase">vs</span>
+                                                                    <span className="flex-1 text-left">{match.Team2}</span>
+                                                                </h3>
+                                                                <div className={`flex items-center justify-center gap-2 text-muted-foreground bg-white/5 px-8 py-2.5 rounded-full border border-white/5 ${isFinal ? "text-sm" : "text-xs"}`}>
+                                                                    <MapPin className="w-4 h-4 text-[#8806CE]/70" />
+                                                                    {match.Venue}
+                                                                </div>
+                                                            </div>
+                                                        </motion.div>
+                                                    )
+                                                })}
+                                            </motion.div>
+                                        </div>
+                                    )}
                                 </div>
                             )}
 
@@ -435,6 +511,11 @@ const SportPage = ({
                                                     </div>
                                                 </div>
                                                 <div className="p-5 flex flex-col items-center">
+                                                    {match.stage && (
+                                                        <div className="text-[10px] uppercase tracking-[0.2em] text-white/40 mb-2 font-bold">
+                                                            {match.stage}
+                                                        </div>
+                                                    )}
                                                     <div className="flex items-center justify-center gap-4 w-full mb-2">
                                                         <div className={`flex items-center justify-end gap-2 flex-1 ${match.Winner === match.Team1 ? 'text-primary font-bold' : 'text-muted-foreground'}`}>
                                                             {match.Winner === match.Team1 && <Trophy className="w-4 h-4 text-primary" />}
