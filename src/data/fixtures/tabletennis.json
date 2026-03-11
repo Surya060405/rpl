@@ -149,8 +149,8 @@
         "Time": "5:30 PM",
         "Venue": "Richardson Hall",
         "Date": "11th March",
-        "isCompleted": false,
-        "Winner": ""
+        "isCompleted": true,
+        "Winner": "MECHANICAL"
     },
     {
         "Team1": "ETC",
@@ -158,8 +158,8 @@
         "Time": "6:00 PM",
         "Venue": "Richardson Hall",
         "Date": "11th March",
-        "isCompleted": false,
-        "Winner": ""
+        "isCompleted": true,
+        "Winner": "ETC"
     },
     {
         "Team1": "CST",
@@ -167,8 +167,8 @@
         "Time": "6:30 PM",
         "Venue": "Richardson Hall",
         "Date": "11th March",
-        "isCompleted": false,
-        "Winner": ""
+        "isCompleted": true,
+        "Winner": "CST"
     },
     {
         "Team1": "ELECTRICAL",
@@ -176,8 +176,8 @@
         "Time": "7:00 PM",
         "Venue": "Richardson Hall",
         "Date": "11th March",
-        "isCompleted": false,
-        "Winner": ""
+        "isCompleted": true,
+        "Winner": "ELECTRICAL"
     },
     {
         "Team1": "Pandya",
@@ -185,8 +185,8 @@
         "Time": "7:30 PM",
         "Venue": "Richardson Hall",
         "Date": "11th March",
-        "isCompleted": false,
-        "Winner": ""
+        "isCompleted": true,
+        "Winner": "Pandya"
     },
     {
         "Team1": "Nivedita",
@@ -203,24 +203,24 @@
         "Time": "8:30 PM",
         "Venue": "Richardson Hall",
         "Date": "11th March",
-        "isCompleted": false,
-        "Winner": ""
+        "isCompleted": true,
+        "Winner": "MSC+PHD"
     },
     {
-        "Team1": "TBD",
-        "Team2": "TBD",
-        "Date": "TBD",
-        "Time": "TBD",
+        "Team1": "IT",
+        "Team2": "ELECTRICAL",
+        "Date": "11th March",
+        "Time": "11:00 PM",
         "Venue": "Richardson Hall",
         "isCompleted": false,
         "Winner": "",
         "stage": "Semi-Final 1"
     },
     {
-        "Team1": "TBD",
-        "Team2": "TBD",
-        "Date": "TBD",
-        "Time": "TBD",
+        "Team1": "CST",
+        "Team2": "MECHANICAL",
+        "Date": "11th March",
+        "Time": "11:30 PM",
         "Venue": "Richardson Hall",
         "isCompleted": false,
         "Winner": "",

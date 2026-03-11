@@ -28,6 +28,7 @@ export interface PoolTeam {
     rd?: number;
     pd?: number;
     qualified?: boolean;
+    winner?: boolean;
 }
 
 export interface Pool {
@@ -290,6 +291,7 @@ const SportPage = ({
                                                         const rd = isObj ? teamObj.rd : undefined;
                                                         const pd = isObj ? teamObj.pd : undefined;
                                                         const qualified = isObj ? teamObj.qualified : false;
+                                                        const isWinner = isObj ? teamObj.winner : false;
 
                                                         const teams = pool.teams as PoolTeam[];
                                                         const hasNrr = teams.some(item => typeof item === "object" && (item as PoolTeam).nrr !== undefined);
@@ -303,6 +305,12 @@ const SportPage = ({
                                                                     {qualified && (
                                                                         <span className="text-[10px] font-bold bg-[#8806CE]/20 text-[#8806CE] px-1.5 py-0.5 rounded border border-[#8806CE]/30">
                                                                             Q
+                                                                        </span>
+                                                                    )}
+                                                                    {isWinner && (
+                                                                        <span className="text-[10px] font-bold bg-emerald-500/20 text-emerald-400 px-1.5 py-0.5 rounded border border-emerald-500/30 flex items-center gap-1">
+                                                                            <Trophy className="w-3.5 h-3.5" />
+                                                                            Winner
                                                                         </span>
                                                                     )}
                                                                 </td>

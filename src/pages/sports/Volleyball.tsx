@@ -38,7 +38,7 @@ const pools: Pool[] = [
         name: "Girls Pool",
         gender: "Girls",
         teams: [
-            { name: "Lt. Williams", played: 1, won: 1, lost: 0, pd: 18, points: 2 },
+            { name: "Lt. Williams", played: 1, won: 1, lost: 0, pd: 18, points: 2, winner: true },
             { name: "Pandya Hall", played: 1, won: 0, lost: 1, pd: -18, points: 0 },
         ],
     },
